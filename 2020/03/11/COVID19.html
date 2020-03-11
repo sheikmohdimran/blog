@@ -1,11 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Covid19 | Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Covid19" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)" />
+<meta property="og:description" content="COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)" />
+<link rel="canonical" href="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html" />
+<meta property="og:url" content="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html" />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-11T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-03-11T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html"},"description":"COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)","@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html","headline":"Covid19","dateModified":"2020-03-11T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Covid19 | Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Covid19" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)" />
+<meta property="og:description" content="COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)" />
+<link rel="canonical" href="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html" />
+<meta property="og:url" content="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html" />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-11T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-03-11T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html"},"description":"COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)","@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html","headline":"Covid19","dateModified":"2020-03-11T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-<h1 id="covid-19-நீங்களும்-உங்கள்-சமூகமும்---ஒரு-தரவு-அறிவியலின்-முன்னோக்கு-a-data-science-perspective">COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)</h1>
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    // remove paragraph tags in rendered toc (happens from notebooks)
+    var toctags = document.querySelectorAll(".toc-entry")
+    toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Covid19</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-11T00:00:00-05:00" itemprop="datePublished">
+        Mar 11, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      18 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#covid-19-நீங்களும்-உங்கள்-சமூகமும்---ஒரு-தரவு-அறிவியலின்-முன்னோக்கு-a-data-science-perspective">COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#இயங்கும்-மருத்துவ-அமைப்பு-தேவை---உடனடித்-தேவை">இயங்கும் மருத்துவ அமைப்பு தேவை. - உடனடித் தேவை.</a></li>
+<li class="toc-entry toc-h2"><a href="#இது-ப்ளு-சளிக்காய்ச்சலைப்-போன்றதல்ல">இது ‘ப்ளு’ சளிக்காய்ச்சலைப் போன்றதல்ல.</a></li>
+<li class="toc-entry toc-h2"><a href="#கலவரப்படாதீர்கள்-அமைதியைப்-பேணவும்-என்பது-பயனளிக்காது">“கலவரப்படாதீர்கள், அமைதியைப் பேணவும்.” என்பது பயனளிக்காது.</a></li>
+<li class="toc-entry toc-h2"><a href="#இது-வெறுதே-உங்களைப்-பற்றியது-மட்டுமல்ல">இது வெறுதே உங்களைப் பற்றியது மட்டுமல்ல:</a></li>
+<li class="toc-entry toc-h2"><a href="#நாம்-வளைவை-சமன்-படுத்த-வேண்டும்">நாம் வளைவை சமன் படுத்த வேண்டும்:</a></li>
+<li class="toc-entry toc-h2"><a href="#ஒரு-சமூகத்தின்-வினையாற்றல்-எல்லாவற்றையும்-வேறுபடுத்துகிறது">ஒரு சமூகத்தின் வினையாற்றல் எல்லாவற்றையும் வேறுபடுத்துகிறது:</a></li>
+<li class="toc-entry toc-h2"><a href="#நமக்கு-அமெரிக்காவிலிருந்து-சரியான-தகவல்களைப்-பெறமுடியவில்லை">நமக்கு அமெரிக்காவிலிருந்து சரியான தகவல்களைப் பெறமுடியவில்லை.</a></li>
+<li class="toc-entry toc-h2"><a href="#முடிவுரை">முடிவுரை</a></li>
+</ul>
+</li>
+</ul><h1 id="covid-19-நீங்களும்-உங்கள்-சமூகமும்---ஒரு-தரவு-அறிவியலின்-முன்னோக்கு-a-data-science-perspective">
+<a class="anchor" href="#covid-19-%E0%AE%A8%E0%AF%80%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%89%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%9A%E0%AE%AE%E0%AF%82%E0%AE%95%E0%AE%AE%E0%AF%81%E0%AE%AE%E0%AF%8D---%E0%AE%92%E0%AE%B0%E0%AF%81-%E0%AE%A4%E0%AE%B0%E0%AE%B5%E0%AF%81-%E0%AE%85%E0%AE%B1%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%AF%E0%AE%B2%E0%AE%BF%E0%AE%A9%E0%AF%8D-%E0%AE%AE%E0%AF%81%E0%AE%A9%E0%AF%8D%E0%AE%A9%E0%AF%8B%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81-a-data-science-perspective" aria-hidden="true"><span class="octicon octicon-link"></span></a>COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)</h1>
 
 <p>எழுத்தாளர்கள்: ஜெர்மி ஹோவர்ட் (<em>Jeremy Howard</em>) மற்றும் ரேச்சல் தாமஸ் (<em>Rachel Thomas</em>) - 09 மார்ச் 2020</p>
 
 <p>மொழிபெயர்ப்பாளர்: ஷேக் முகம்மது இம்ரான் (<em>Sheik Mohamed Imran</em>) - 11 மார்ச் 2020</p>
 
-<h2 id="இயங்கும்-மருத்துவ-அமைப்பு-தேவை---உடனடித்-தேவை">இயங்கும் மருத்துவ அமைப்பு தேவை. - உடனடித் தேவை.</h2>
+<h2 id="இயங்கும்-மருத்துவ-அமைப்பு-தேவை---உடனடித்-தேவை">
+<a class="anchor" href="#%E0%AE%87%E0%AE%AF%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%AE%E0%AE%B0%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81%E0%AE%B5-%E0%AE%85%E0%AE%AE%E0%AF%88%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81-%E0%AE%A4%E0%AF%87%E0%AE%B5%E0%AF%88---%E0%AE%89%E0%AE%9F%E0%AE%A9%E0%AE%9F%E0%AE%BF%E0%AE%A4%E0%AF%8D-%E0%AE%A4%E0%AF%87%E0%AE%B5%E0%AF%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>இயங்கும் மருத்துவ அமைப்பு தேவை. - உடனடித் தேவை.</h2>
 
 <p>2 ஆண்டுகளுக்கு முன்பு, எங்களில் ஒருவர் - ராச்சல் (Rachel) - என்பவருக்கு நோய்த் தொற்று மூளையில் ஏற்பட்டது. இந்த நோய்க்கு உள்ளானோரில் சுமார் 25% நோயாளிகள் உயிருடன் இருப்பதில்லை. மற்றும் சுமார் 33% நோயாளிகளில் நிரந்தர அறிவாற்றல் குறைபாட்டிற்கு உள்ளாகிறார்கள் . இன்னும் பலர் நிரந்தர பார்வை மற்றும் செவிப்புலன் பாதிப்புக்கு உள்ளாகிறார்கள். - ராச்சல் (Rachel) - அவர்களை ஏற்றிவந்த மருத்துவமனையின் வாகனம், நிறுத்துமிடத்தின் அருகே வந்த நேரத்தில் அவர் மயக்கமடைந்திருந்தார்.</p>
 
@@ -19,13 +138,14 @@
 
 <p>இத்தாலியின் கடும் பாதிப்புக்குள்ளான பகுதியின் உள்ள Crisis response unit இன் பிராந்திய தலைவரான மரு. அன்டானியோ பெசன்ட் - Dr. Antonio Pesenti - <a href="https://www.reuters.com/article/us-health-coronavirus-italy/alarmed-italy-locks-down-north-to-prevent-spread-of-coronavirus-idUSKBN20V06R">கூறுகையில்</a> “நாங்கள் இப்போது இந்தத் தீவிர சிகிச்சையை மருத்துவமனையிலுள்ள நடைபாதைகள், நோய் மீட்பு அறையை ஒட்டிய காலியிடங்கள்’, அறுவைச்சிச்சை (ஆபரேஷன் தியேட்டர்) ஒட்டிய காலியிடங்கள் போன்ற இடங்களில் வழங்க நிர்பந்தப்பட்டிருக்கிறோம். உலகின் மிகச் சிறந்த சுகாதார அமைப்புகளில் ஒன்று லும்பார்டி - Lombardy - யில் உள்ளது. இது தன் இயக்கநிலைச் சரிவிற்கு ஒரேயொரு படி தூரத்தில்தான் உள்ளது.”</p>
 
-<p><img src="/images/2020-03-11-COVID19/image1.jpg" alt="A medical tent used in Italy" /></p>
+<p><img src="/images/2020-03-11-COVID19/image1.jpg" alt="A medical tent used in Italy"></p>
 
 <blockquote>
   <p>நோயாளிகளின் வருகையைக் கையாள உதவும் வகையில் இது போன்ற கூடாரங்கள் அமைக்கப்பட்டுள்ளன</p>
 </blockquote>
 
-<h2 id="இது-ப்ளு-சளிக்காய்ச்சலைப்-போன்றதல்ல">இது ‘ப்ளு’ சளிக்காய்ச்சலைப் போன்றதல்ல.</h2>
+<h2 id="இது-ப்ளு-சளிக்காய்ச்சலைப்-போன்றதல்ல">
+<a class="anchor" href="#%E0%AE%87%E0%AE%A4%E0%AF%81-%E0%AE%AA%E0%AF%8D%E0%AE%B3%E0%AF%81-%E0%AE%9A%E0%AE%B3%E0%AE%BF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%BE%E0%AE%AF%E0%AF%8D%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AE%B2%E0%AF%88%E0%AE%AA%E0%AF%8D-%E0%AE%AA%E0%AF%87%E0%AE%BE%E0%AE%A9%E0%AF%8D%E0%AE%B1%E0%AE%A4%E0%AE%B2%E0%AF%8D%E0%AE%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>இது ‘ப்ளு’ சளிக்காய்ச்சலைப் போன்றதல்ல.</h2>
 
 <p>‘ப்ளு’ - சளிக்காய்ச்சலில் (Flu) இறப்பு விகிதம் சுமார் 0.1% நோய்த் தொற்றுகளைக் கொண்டுள்ளது. ஹார்வர்டில் உள்ள தொற்று நோய் இயக்கவியல் மையத்தின் இயக்குனர், மார்க் லிப்ஸித் - Marc Lipsitch-, Covid-19 என்ற நச்சு நுண்ணுயிர்களில் இறப்பு விகிதம் சுமார் 1% முதல் 2% என்று <a href="https://www.washingtonpost.com/opinions/2020/03/06/why-its-so-hard-pin-down-risk-dying-coronavirus/">மதிப்பிடுகிறார்</a>. <a href="https://www.medrxiv.org/content/10.1101/2020.03.04.20031104v1.full.pdf">சமீபத்திய தொற்றுநோயியல் தரவுகள்</a>, பிப்ரவரியில் சீனாவில் 1.6% வீதத்தைக் கண்டறிந்தது, இது ‘ப்ளு’ (Flu) - சளிக்காய்ச்லை விட <a href="https://www.fast.ai/2020/03/09/coronavirus/#fn:epid">பதினாறு மடங்கு அதிகமாகும்</a> (இருப்பினும் இது மிகவும் பழமைவாத எண்ணாக இருக்கலாம், ஏனெனில் மருத்துவ முறையைச் சமாளிக்க முடியாதபோது விகிதங்கள் நிறைய அதிகரிக்கும்).</p>
 
@@ -35,7 +155,7 @@
 
 <p>எண்ணிக்கை அளவில் பாதிக்கப்பட்டவர்கள் அதிவேகமாக அதிகரித்து வரும் வளர்ச்சியை, உள்ளுணர்வாகப் புரிந்துகொள்ள முயற்சிப்பது என்பது நமது மூளையால் கையாள வடிவமைக்கப்பட்ட ஓர் அமைப்பு அல்ல. எனவே, நம்முடைய உள்ளுணர்வைப் பயன்படுத்தாமல், இதை நாம் விஞ்ஞானிகளாக பகுப்பாய்வு செய்ய வேண்டும்.</p>
 
-<p><img src="/images/2020-03-11-COVID19/image2.png" alt="Where will this be in 2 weeks? 2 months?" /></p>
+<p><img src="/images/2020-03-11-COVID19/image2.png" alt="Where will this be in 2 weeks? 2 months?"></p>
 
 <blockquote>
   <p>2 வாரங்களில் இது இங்கே இருக்கும்? சரி… 2 மாதங்களில்?</p>
@@ -47,7 +167,7 @@
 
 <p>சமூக ஊடகங்களில் பெரிதாக வரும், அதிகமாக பின்பற்றக்கூடிய -Elon Musk- போன்ற செய்யப்பட்டுள்ள கணக்குகள் உட்பட) லாஜிஸ்டிக் எனப்படும் இரண்டும் இரண்டும் நான்கு என்ற சாதாரண கூட்டல் வளர்ச்சிக்கும் (logistics growth), இரண்டின் இருமடங்குக்கும் அதே இரண்டின் இருமடங்குக்கும் (2X2=4, 4X4=16, 16X16=256…) என்ற அடுக்குக்குறி வளர்ச்சிக்கும் (exponential growth) இடையிலான வேறுபாட்டைத் தவறாகப் புரிந்து கொண்டு செய்தி பரப்பிவருகின்றனர்.</p>
 
-<p><img src="/images/2020-03-11-COVID19/image3.png" alt="Image result for logistic growth" /></p>
+<p><img src="/images/2020-03-11-COVID19/image3.png" alt="Image result for logistic growth"></p>
 <blockquote>
   <p>அடுக்குக்குறி (exponential) vs லாஜிஸ்டிக் (logistic) வளர்ச்சி</p>
 </blockquote>
@@ -71,7 +191,8 @@
 
 <p>குறைந்தபட்சம் உங்கள் வட்டாரத்தில் ஏற்படும் பாதிப்பு, ஓரளவு காலநிலையைச் சார்ந்தது என்பதற்கான சில ஆரம்ப அறிகுறிகள் உள்ளன என்பதையும் கருத்தில் கொள்ளவேண்டும். <a href="https://poseidon01.ssrn.com/delivery.php?ID=091071099092098096101097074089104068104013035023062021010031112088025099126064001093097030102106046016114116082016095089113023126034089078012119081090111118122007110026000085123071022022127025026080005029001020025126022000066075021086079031101116126112&amp;EXT=pdf">Temperature and latitude analysis to predict potential spread and seasonality for COVID-19</a> பகுப்பாய்வின்படி, இந்த நோய் இதுவரை லேசான காலநிலைகளில் பரவி வருவதை சுட்டிக்காட்டுகிறது (துரதிர்ஷ்டவசமாக, சான் பிரான்சிஸ்கோவில் வெப்பநிலை வரம்பு அந்த வரம்பில் சரியாக உள்ளது; அதுமட்டுமல்லாமல் இது லண்டன் உட்பட ஐரோப்பாவின் முக்கிய மக்கள் மையங்களையும் உள்ளடக்கியது.)</p>
 
-<h2 id="கலவரப்படாதீர்கள்-அமைதியைப்-பேணவும்-என்பது-பயனளிக்காது">“கலவரப்படாதீர்கள், அமைதியைப் பேணவும்.” என்பது பயனளிக்காது.</h2>
+<h2 id="கலவரப்படாதீர்கள்-அமைதியைப்-பேணவும்-என்பது-பயனளிக்காது">
+<a class="anchor" href="#%E0%AE%95%E0%AE%B2%E0%AE%B5%E0%AE%B0%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BE%E0%AE%A4%E0%AF%80%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%85%E0%AE%AE%E0%AF%88%E0%AE%A4%E0%AE%BF%E0%AE%AF%E0%AF%88%E0%AE%AA%E0%AF%8D-%E0%AE%AA%E0%AF%87%E0%AE%A3%E0%AE%B5%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%8E%E0%AE%A9%E0%AF%8D%E0%AE%AA%E0%AE%A4%E0%AF%81-%E0%AE%AA%E0%AE%AF%E0%AE%A9%E0%AE%B3%E0%AE%BF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%BE%E0%AE%A4%E0%AF%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>“கலவரப்படாதீர்கள், அமைதியைப் பேணவும்.” என்பது பயனளிக்காது.</h2>
 
 <p>மக்களுக்கான ஊடகங்களில், Covid -19 நச்சு நுண்ணுயிர் நோய்த்தொற்றின் தாக்கத்தைப்பற்றிய செய்திகளில் “கலவரப்படாதீர்கள்” அல்லது “அமைதியாக இருங்கள்” என்று சுட்டிக்காட்டும் நபர்களுக்கு ஓர் செய்தி - “பீதி அடைய வேண்டாம்” அல்லது “அமைதியாக இருங்கள்” என்ற ஒரு பொதுவான பதில் முற்றிலும் உதவாத செயல் என்பதே. “பீதி அடைவதை” ஒரு பொருத்தமான பதில் என்று யாரும் பரிந்துரைக்கவில்லை. எவ்வாறாயினும், சில காரணங்களால், “அமைதியாக இருங்கள்” என்பது சில வட்டாரங்களில் மிகவும் பிரபலமான எதிர்வினையாகச் செயல்படும். இருப்பினும் எந்தவொரு தொற்றுநோயியல் நிபுணரும் இப்படி “கலவரப்படாதீர்கள்” அல்லது “அமைதியாக இருங்கள்” என்று சுட்டிக்காட்ட எண்ணுவதில்லை. ஒருவேளை “அமைதியாக இருங்கள்” என கூறுவது சிலருக்கு தங்கள் சொந்த செயலற்ற தன்மையைப் பற்றி நன்றாக உணர உதவுகிறது, அல்லது தலையில்லாத கோழியைப் போல ஓடுவதாக அவர்கள் கற்பனை செய்யும் பயந்த நபர்களை விடத் தங்களை உயர்ந்தவர்களாக எண்ணிக்கொள்ள முயல்கின்றனர். ஆனால் “அமைதியாக இருங்கள்” என்ற எண்ணம், நோய்பரவுதற்கு எதிராகத் தயார் செய்து அதை எதிர்கொள்ளாமல் இருப்பது, தோல்வியின் அடித்தளத்திற்கு எளிதாக வழிவகுக்கும்.</p>
 
@@ -104,7 +225,8 @@
   </li>
 </ul>
 
-<h2 id="இது-வெறுதே-உங்களைப்-பற்றியது-மட்டுமல்ல">இது வெறுதே உங்களைப் பற்றியது மட்டுமல்ல:</h2>
+<h2 id="இது-வெறுதே-உங்களைப்-பற்றியது-மட்டுமல்ல">
+<a class="anchor" href="#%E0%AE%87%E0%AE%A4%E0%AF%81-%E0%AE%B5%E0%AF%86%E0%AE%B1%E0%AF%81%E0%AE%A4%E0%AF%87-%E0%AE%89%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%88%E0%AE%AA%E0%AF%8D-%E0%AE%AA%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%BF%E0%AE%AF%E0%AE%A4%E0%AF%81-%E0%AE%AE%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AE%B2%E0%AF%8D%E0%AE%B2" aria-hidden="true"><span class="octicon octicon-link"></span></a>இது வெறுதே உங்களைப் பற்றியது மட்டுமல்ல:</h2>
 
 <p>நீங்கள் 50 வயதிற்குட்பட்டவராக இருந்தால், சமரசம் செய்யப்பட்ட நோயெதிர்ப்பு அமைப்பு (compromised immune system), இருதய நோய், புகைப்பழக்கத்தின் வரலாறு அல்லது பிற நாட்பட்ட நோய்கள் போன்ற ஆபத்து காரணிகள் இல்லை என்றால், Covid-19 உங்களைக் கொல்ல வாய்ப்பில்லை என்று அறிவதில் உங்களுக்கு கொஞ்சம் ஆறுதல் கிடைக்கும். ஆனால் நீங்கள் எவ்வாறு நடந்ததுகொள்கிறீர்கள் என்பது இன்னும் முக்கியமானது. ஏனெனில், உங்களுக்கு நோய்த்தொற்று ஏற்படுவதற்கான வாய்ப்பு மற்றவர்களுக்குத் தொற்று ஏற்படுவதற்கான வாய்ப்பை போலவே நிலையாகவே உள்ளது. இப்பொழுது சராசரியாக, பாதிக்கப்பட்ட ஒவ்வொரு நபரும் இன்னும் இரண்டு பேருக்கு மேல் தொற்று நோயைப் பரப்பிக் கொண்டிருக்கிறார்கள். மேலும் அவர்கள் அறிகுறிகளைக் காண்பிப்பதற்கு முன்பே தொற்றுநோயாளியாக மாறிவிடுகிறார்கள். நீங்கள் அக்கறை கொண்ட பெற்றோர்கள் அல்லது தாத்தா, பாட்டியுடன் நேரத்தை செலவிட்டபிறகு அவர்களின் Covid -19 நோய்த்தொற்றுக்கு நீங்கள் பொறுப்பாளர் என உங்களுக்குத் தெரிந்தால், அதுவே நீங்கள் வாழ்வதற்கு பெரும் மனச்சுமையாக இருக்கும்.</p>
 
@@ -120,11 +242,12 @@
 
 <p>ஆனால் இது சரியான செயல் என்று எங்களுக்குத் தெரியும், இப்படி செய்யவில்லையென்றால் எங்கள் <a href="https://www.fast.ai/2020/03/09/coronavirus/#fn:changes">நாட்டில்/சமூகத்தில்</a> இக்கொடியநோய் பரவுவதை நிச்சயம் அதிகரித்திருக்கக்கூடும்.</p>
 
-<h2 id="நாம்-வளைவை-சமன்-படுத்த-வேண்டும்">நாம் வளைவை சமன் படுத்த வேண்டும்:</h2>
+<h2 id="நாம்-வளைவை-சமன்-படுத்த-வேண்டும்">
+<a class="anchor" href="#%E0%AE%A8%E0%AE%BE%E0%AE%AE%E0%AF%8D-%E0%AE%B5%E0%AE%B3%E0%AF%88%E0%AE%B5%E0%AF%88-%E0%AE%9A%E0%AE%AE%E0%AE%A9%E0%AF%8D-%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4-%E0%AE%B5%E0%AF%87%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AF%8D" aria-hidden="true"><span class="octicon octicon-link"></span></a>நாம் வளைவை சமன் படுத்த வேண்டும்:</h2>
 
 <p>இந்த வளைக்கோட்டினைப் படுக்கைக் கோடாகவே மாற்ற வேண்டியது - தேவையான ஒன்றானது. இது மிகவும் முக்கியமானது, ஏனென்றால் ஒரு சமூகத்தில் நோய்த்தொற்றின் வீதத்தை நாம் குறைக்க முடிந்தால், பாதிக்கப்பட்ட மற்றும் சாதாரண நோயாளிகளின் சுமையை சமாளிக்க அந்த சமூகத்தில் உள்ள மருத்துவமனைகளுக்கு வாய்ப்பை வழங்குகிறோம். இது “வளைவைச் சமன்படுத்துவது” (flattening the curve) என்று விவரிக்கப்படுகிறது, மேலும் இந்த விளக்கப்பட விளக்கப்படத்தில் தெளிவாகக் காட்டப்பட்டுள்ளது:</p>
 
-<p><img src="/images/2020-03-11-COVID19/image4.jpeg" alt="Staying under that dotted line means everything" /></p>
+<p><img src="/images/2020-03-11-COVID19/image4.jpeg" alt="Staying under that dotted line means everything"></p>
 
 <blockquote>
   <p>புள்ளியிடப்பட்ட கோட்டின் கீழ் இருப்பது மிக முக்கியமானது</p>
@@ -138,13 +261,14 @@
   <p><em>அமெரிக்காவில் 1000 பேருக்கு சுமார் 2.8 மருத்துவமனைப் படுக்கைகள் உள்ளன. 330M மக்கள் தொகையுடன் இணைவைத்துப் பார்க்கும்போது, இது சுமார் 1M படுக்கைகள் ஆகும். எப்பொழுதும் இந்த படுக்கைகளில் ஏற்கனவே 65% உபயோகத்திலிருக்கும். இதை கணக்கில் கொண்டால் சுமாராக நாடு முழுவதும் 330,000 படுக்கைகள் காலியாக இருக்கும். (வழக்கமான காய்ச்சல் அற்குறிகளுடன் உள்ள நோயாளிகள், இந்த ஆண்டு இந்த நேரத்தில் சற்று குறைவாக இருக்கலாம்.) இத்தாலியின் தரவுகளை/எண்களை நம்புவோமேயானால், சுமார் 10% நோயாளிகள் மருத்துவமனையில் அனுமதிக்கப்பட வேண்டிய அளவுக்குத் தீவிரமானவர்கள் என்று வைத்துக் கொள்வோம். (பல நோயாளிகளுக்கு, மருத்துவமனையில் அனுமதித்து சிகிச்சை அளிப்பது பல வாரங்களுக்கு நீடிக்கும் என்பதை நினைவில் கொள்ளுங்கள் - வேறுவிதமாகக் கூறினால், COVID19 நோயாளிகளுடன் படுக்கைகள் நிரப்பப்படுவதால் நோயாளிகள் குணமடைந்து மருத்துவமனையை விட்டுச் செல்வதால் ஏற்படும் காலியான படுக்கைகள் (விற்றுமுதல்) மிகவும் குறைவாக இருக்கும்.) இந்த மதிப்பீட்டின்படி, மே 8 ஆம் தேதிக்குள், அமெரிக்காவில் உள்ள அனைத்து திறந்த மருத்துவமனைப் படுக்கைகளும் நிரப்பப்படும். (இது மிகவும் தொற்றும் வைரஸ். நோயாளிகளைத் தனிமைப்படுத்த இந்தப் படுக்கைகள் போதுமானதா? என்பதைப் பற்றி இது எதுவும் கூறவில்லை.) கடுமையான நிகழ்வுகளால் நாம் இருமடங்கு தவறாகக் கணக்கிட்டிருந்தால்கூட, காலியான படுக்கைகள் செறிவூட்டலின் காலவரிசை என்பது ஏறக்குறைய 6 நாட்கள் என்று மட்டுமே மாறுகிறது. மற்ற (COVID19 அல்லாத) காரணங்களிலிருந்து படுக்கைகளுக்கான தேவை இருக்காது என (நம்மை நாமே ஏமாற்றிக்கொள்ளும்) கருத்தைக்கொண்டிருந்து, (COVID19) காரணங்களினால் 20% நோயாளிகள் மருத்துவமனையில் அனுமதிக்கப்பட வேண்டும் என்ற நிலை வந்தால், சுமார் மே 2 ஆம் தேதிக்குள் அனைத்துப் படுக்கைகளும் நிரப்பப்பட்டுவிடும். 5% நோயாளிகள் மட்டுமே இருப்பார்கள் என்ற நிலை வந்தால், படுக்கைகள் சுமார் மே 14 வரை காலியாக இருக்கும். 2.5% நோயாளிகள் மட்டுமே இருப்பார்கள் என்ற நிலை வந்தால், படுக்கைகள் சுமார் மே 20 வரை காலியாக இருக்கும். சுகாதார அமைப்பின் சுமை கூடுதலாகிக் கொண்டே இருப்பதால் மருத்து சிகிச்சைப் (Rx) பற்றாக்குறை போன்றவை, பொதுவாக நன்கு நிர்வகிக்கப்படும் நாட்பட்ட தீவிர சிகிச்சை மற்றும் மருத்துவமனையில் அனுமதிக்கப்பட வேண்டிய நோயாளி மக்கள், கடுமையான மன உளைச்சலின் நிலைகளில் தாங்கள் உள்ளாக்கப்படுவதைக் காணலாம். சுகாதார அமைப்பின் சுமை அதிகமானால், பொதுவாக நன்கு நிர்வகிக்கப்படும் நாள்பட்ட நோய் நிலைமைகளைக் கொண்டவர்கள், தீவிர சிகிச்சை/கண்காணிப்புப் பிரிவிற்கு அனுமதிக்க வேண்டிய நிலைமைக்கு தள்ளப்படுவார்கள் .</em></p>
 </blockquote>
 
-<h2 id="ஒரு-சமூகத்தின்-வினையாற்றல்-எல்லாவற்றையும்-வேறுபடுத்துகிறது">ஒரு சமூகத்தின் வினையாற்றல் எல்லாவற்றையும் வேறுபடுத்துகிறது:</h2>
+<h2 id="ஒரு-சமூகத்தின்-வினையாற்றல்-எல்லாவற்றையும்-வேறுபடுத்துகிறது">
+<a class="anchor" href="#%E0%AE%92%E0%AE%B0%E0%AF%81-%E0%AE%9A%E0%AE%AE%E0%AF%82%E0%AE%95%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%A9%E0%AF%8D-%E0%AE%B5%E0%AE%BF%E0%AE%A9%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%8E%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AE%BE%E0%AE%B5%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AF%88%E0%AE%AF%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%B5%E0%AF%87%E0%AE%B1%E0%AF%81%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81%E0%AE%95%E0%AE%BF%E0%AE%B1%E0%AE%A4%E0%AF%81" aria-hidden="true"><span class="octicon octicon-link"></span></a>ஒரு சமூகத்தின் வினையாற்றல் எல்லாவற்றையும் வேறுபடுத்துகிறது:</h2>
 
 <p>இதுவரை நாம் விவாதித்தபடி, இந்தக் கணக்கு ஒரு உறுதியானதல்ல. தீவிரமான நடவடிக்கைகளை மேற்கொள்வதன் மூலம் நோய்ப் பரவலைக் குறைக்க முடியும் என்று சீனா ஏற்கனவே காட்டியுள்ளது. வெற்றிகரமான நடவடிக்கைக்கு மற்றொரு சிறந்த எடுத்துக்காட்டு வியட்நாம் ஆகும், அங்கு, மற்றவற்றுடன், நாடு தழுவிய விளம்பரப் பிரச்சாரம் (ஒரு கவர்ச்சியான பாடல் உட்பட!) சமூக நடவடிக்கையை விரைவாகத் திரட்டி, மக்கள் தங்கள் நடத்தையை சரியான முறையில் சரிசெய்துகொள்வதை உறுதிசெய்தது.</p>
 
 <p>இது ஒரு கற்பனையான சூழ்நிலை மட்டுமல்ல - இது 1918 சளிகாய்ச்சல் (Flu) தொற்றுநோய்களில் தெளிவாகக் காட்டப்பட்டது. USA வில் இரண்டு நகரங்கள் தொற்றுநோய்க்கு மிகவும் மாறுபட்ட எதிர்வினைகளைக் காட்டின: பிலடெல்பியா (Philedelphia) 200,000 மக்களைக் கொண்ட ஒரு மாபெரும் அணிவகுப்புடன் நோயை எதிர்த்து நடத்தப்பட்ட சுகாதாரப்போருக்கு பணம் திரட்ட உதவியது. ஆனால் செயின்ட் லூயிஸ் (Saint Louis) சமூக தொடர்புகளைக் குறைக்க கவனமாக வடிவமைக்கப்பட்ட செயல்முறைகளை வைத்து, வைரஸின் பரவலைக் குறைப்பதோடு, அனைத்து பெரிய நிகழ்வுகளையும் ரத்துசெய்தது . தேசிய அறிவியல் அகாடமியின் செயல்முறைகளில் காட்டப்பட்டுள்ளபடி, ஒவ்வொரு நகரத்திலும் இறப்புகளின் எண்ணிக்கை எப்படி இருந்தது? <a href="https://www.pnas.org/content/104/18/7582">National Academy of Sciences</a> யின் படி இங்கே:</p>
 
-<p><img src="/images/2020-03-11-COVID19/image5.jpg" alt="Impact of differing responses to the 1918 Flu pandemic" /></p>
+<p><img src="/images/2020-03-11-COVID19/image5.jpg" alt="Impact of differing responses to the 1918 Flu pandemic"></p>
 
 <blockquote>
   <p>1918 காய்ச்சல் தொற்றுநோய்க்கு மாறுபட்ட நடவடிக்கைகளின் தாக்கம்</p>
@@ -158,13 +282,14 @@
 
 <p>இந்த நெருக்கடியின் போது, குறைந்த ஊதியப் பொருளாதாரத்தில் (gig economy) - இங்கு (Uber போன்ற கம்பனிகளில்) வேலை புரிபவர்கள், சம்பளம் பெறாத தொழிலாளர்கள் மற்றும் உறுதியில்லாத வேலையில் இருப்பவர்களின் பாதிப்புகள் அனைவருக்கும் தெரியவரும். மணிநேர ஊதியத்தில் பணிபுரியும் 60 சதவிகித யு.எஸ். தொழிலாளர்களிடம் அவர்களுக்குத் தேவைப்படும் தருணத்தில் விடுமுறை எடுத்துக்கொள்வது எவ்வளவு கடினமானது? என்று கேளுங்கள்.” அமெரிக்க தொழிலாளர் புள்ளிவிவர பணியகத்தின் படி, குறைந்த வருமானம் கொண்டவர்களில் மூன்றில் ஒரு பங்கிற்கும் குறைவானவர்களுக்கு மட்டுமே ஊதியத்தோடு கூடிய நோய்வாய்ப்பட்ட விடுப்பு (paid sick leave) கிடைப்பதாகக் காட்டுகிறது.</p>
 
-<p><img src="/images/2020-03-11-COVID19/image6.png" alt="Most poor Americans do not have sick leave, so have to go to work." /></p>
+<p><img src="/images/2020-03-11-COVID19/image6.png" alt="Most poor Americans do not have sick leave, so have to go to work."></p>
 
 <blockquote>
   <p>பெரும்பாலான ஏழை அமெரிக்கர்களுக்கு நோய்வாய்ப்பட்ட விடுப்பு இல்லை, எனவே அவர்கள் கண்டிப்பாக வேலைக்கு செல்ல வேண்டிய கட்டாயத்தில் உள்ளனர்.</p>
 </blockquote>
 
-<h2 id="நமக்கு-அமெரிக்காவிலிருந்து-சரியான-தகவல்களைப்-பெறமுடியவில்லை">நமக்கு அமெரிக்காவிலிருந்து சரியான தகவல்களைப் பெறமுடியவில்லை.</h2>
+<h2 id="நமக்கு-அமெரிக்காவிலிருந்து-சரியான-தகவல்களைப்-பெறமுடியவில்லை">
+<a class="anchor" href="#%E0%AE%A8%E0%AE%AE%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81-%E0%AE%85%E0%AE%AE%E0%AF%86%E0%AE%B0%E0%AE%BF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81-%E0%AE%9A%E0%AE%B0%E0%AE%BF%E0%AE%AF%E0%AE%BE%E0%AE%A9-%E0%AE%A4%E0%AE%95%E0%AE%B5%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%88%E0%AE%AA%E0%AF%8D-%E0%AE%AA%E0%AF%86%E0%AE%B1%E0%AE%AE%E0%AF%81%E0%AE%9F%E0%AE%BF%E0%AE%AF%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AF%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>நமக்கு அமெரிக்காவிலிருந்து சரியான தகவல்களைப் பெறமுடியவில்லை.</h2>
 
 <p>அமெரிக்காவில் உள்ள ஒரு பெரிய பிரச்சினை என்னவென்றால், மிகக் குறைந்த சோதனை மட்டுமே செய்யப்படுகிறது, மற்றும் சோதனை முடிவுகள் சரியாகப் பகிரப்படுவதில்லை, அதாவது உண்மையில் என்ன நடக்கிறது? என்பது நமக்கு தெரிவதில்லை. முந்தைய எஃப்.டி.ஏ கமிஷனரான ஸ்காட் கோட்லீப் (Scott Gottlieb), “சியாட்டிலில் சிறந்த சோதனைகள் நடந்துள்ளன என்றும், அங்கும் தொற்றுநோயைக் காண்கிறோம்.” என்றும் விளக்கினார். “சியாட்டில் Covid-19 பரவு பற்றி ஆரம்பத்திலே எங்களுக்குத் தெரிந்ததற்கான காரணம், தன்னார்வம் கொண்ட ஆராய்ச்சியாளர்கள்/விஞ்ஞானிகளால் செய்யப்பட்ட செண்டினல் கண்காணிப்புப் பணி. இத்தகைய கண்காணிப்பு மற்ற நகரங்களில் ஒருபோதும் முழுமையாக நடைபெறவில்லை. எனவே மற்ற யு.எஸ். ஹாட் ஸ்பாட்கள் எத்தனை உள்ளன என இன்னும் முழுமையாக கண்டறியப்படவில்லை. ” <a href="https://www.theatlantic.com/health/archive/2020/03/how-many-americans-have-been-tested-coronavirus/607597/">தி அட்லாண்டிக்</a> (The Atlantic) -இன் கருத்துப்படி, துணை ஜனாதிபதி மைக் பென்ஸ் (Mike Pence) இந்த வாரம் “சுமார் 1.5 மில்லியன் சோதனை முடிவுகள்” கிடைக்கும் என்று உறுதியளித்தார், ஆனால் இந்த கட்டத்தில் அமெரிக்கா முழுவதும் 2,000 க்கும் குறைவான மக்கள் மட்டுமே சோதனை செய்யப்பட்டுள்ளனர். தி கோவிட் டிராக்கிங் ப்ராஜெக்ட் (<a href="https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRwAqp96T9sYYq2-i7Tj0pvTf6XVHjDSMIKBdZHXiCGGdNC0ypEU9NbngS8mxea55JuCFuua1MUeOj5/pubhtml">The COVID Tracking Project</a>)-இலிருந்து , ராபின்சன் மேயர் மற்றும் தி அட்லாண்டிக் -இன் அலெக்சிஸ் மாட்ரிகல் (Alexis Madrigal) ஆகியோர் கூறுகையில்:</p>
 
@@ -188,7 +313,8 @@
 
 <p>மற்ற நாடுகள் அமெரிக்காவை விட மிக விரைவாகவும் கணிசமாகவும் செயல்படுகின்றன. தென்கிழக்கு ஆசியாவில் பல நாடுகள், உதாரணமாக தைவானில், R0 இப்போது 0.3 ஆகக் குறைந்துள்ளது. மற்றும் சிங்கப்பூரின் COVID-19 -க்கு எதிரான நடவடிக்கைகள் உலகிற்கு <a href="https://www.medpagetoday.com/infectiousdisease/covid19/85254">முன்மாதிரியான எடுத்துக்காட்டாக விளங்குகிறது</a>. இது போல நடவடிக்கைகளை ஆசியாவில் மட்டுமல்ல மற்ற இடங்களிலும் செயல்படுத்திவருகின்றனர். உதாரணமாக, பிரான்சில் 1000 பேருக்கு அதிகமானவர்கள் கூடிவருவது தடைசெய்யப்பட்டுள்ளது மற்றும் மூன்று மாவட்டங்களில் இப்போது பள்ளிகள் மூடப்பட்டுள்ளன.</p>
 
-<h2 id="முடிவுரை">முடிவுரை</h2>
+<h2 id="முடிவுரை">
+<a class="anchor" href="#%E0%AE%AE%E0%AF%81%E0%AE%9F%E0%AE%BF%E0%AE%B5%E0%AF%81%E0%AE%B0%E0%AF%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>முடிவுரை</h2>
 
 <p>COVID-19 என்பது ஒரு குறிப்பிடத்தக்க சமூகப் பிரச்சினையாகும், மேலும் நோயின் பரவலைக் குறைக்க நாம் அனைவரும் செயல்பட வேண்டும். அதாவது:</p>
 
@@ -212,3 +338,36 @@
     <p>அதிகமாக மற்றவர்கள் கைபடும் மேற்பரப்புகள் மற்றும் தொகுப்புகளைத் தூய்மைப்படுத்தும் திரவ’ங்கள் sanitizer அல்லது சாராயத் துடைப்பான்கள் alchol wipes பயன்படுத்தி கிருமி நீக்கம் செய்யவும் (வைரஸ் மேற்பரப்பில் 9 நாட்கள் செயலில் இருக்கக்கூடும் என கூறப்படுகிறது ).</p>
   </li>
 </ul>
+
+  </div><a class="u-url" href="/blog/2020/03/11/COVID19.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/sheikmohdimran" title="sheikmohdimran"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/sheikmohdimran" title="sheikmohdimran"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
