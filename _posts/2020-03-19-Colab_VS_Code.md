@@ -7,7 +7,7 @@ author: Sheik Mohamed Imran
 comment: true
 ---
 
-The latest version of the popular Fast.AI course is now underway and has moved online, due to the limitation excerted by Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
+The latest version of the popular Fast.AI course is now underway and has moved [online](https://twitter.com/jeremyphoward/status/1236088745251581952), due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
 
 ```
 https://github.com/fastai/course-v4
