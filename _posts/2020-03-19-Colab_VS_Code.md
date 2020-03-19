@@ -2,9 +2,9 @@
 title: "Fast.AI Course V4 with Google Colab and VS Code"
 toc: false
 layout: post
-comments: true
 categories: [colab, fastai, VSCode]
-authors: Sheik Mohamed Imran
+author: Sheik Mohamed Imran
+comment: true
 ---
 
 The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
@@ -106,10 +106,12 @@ This will list all the notebooks on the left, select the notebook you want to wo
 
 
 
-> Tip: You can also clone the notebook from [here](https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb) into your account to see this live in action.
+You can also clone the notebook from [here](https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb) into your account to see this live in action.
 
->Note: Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..
-```console
+>**Note:** 
+>
+>Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..
+```
 !pip install -r requirements.txt
 ```
 
