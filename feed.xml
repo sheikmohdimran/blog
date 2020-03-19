@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-19T10:40:19-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html"># Fast.AI Course V4 with Google Colab and VS Code</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html" rel="alternate" type="text/html" title="# Fast.AI Course V4 with Google Colab and VS Code" /><published>2020-03-19T00:00:00-05:00</published><updated>2020-03-19T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-19T10:45:48-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fast.AI Course V4 with Google Colab and VS Code</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html" rel="alternate" type="text/html" title="Fast.AI Course V4 with Google Colab and VS Code" /><published>2020-03-19T00:00:00-05:00</published><updated>2020-03-19T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/fastai/course-v4
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -54,25 +54,25 @@
 
 &lt;p&gt;Output from the cell will have a link, ending with the format **http://&lt;random_number&gt;.ngrok.io**&lt;/random_number&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/\image-20200319194723416.png&quot; alt=&quot;image-20200319194723416&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/image-20200319194723416.png&quot; alt=&quot;image-20200319194723416&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Access the URL to get a VS Code interface. Now let us enable ipython notebook support by installing the &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ms-python.python&quot;&gt;Microsoft Python Extension&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Go to ‘Extensions’ option in the VS Code, and search for ‘Python’ and click on ‘Install’.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/\image-20200319194735469.png&quot; alt=&quot;image-20200319194735469&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/image-20200319194735469.png&quot; alt=&quot;image-20200319194735469&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once done, reload the VS Code UI by clicking on ‘Reload Required’. This will enable the installed plugin.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/\image-20200319195926238.png&quot; alt=&quot;image-20200319195926238&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/image-20200319195926238.png&quot; alt=&quot;image-20200319195926238&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To set the working directory, click on the ‘Explorer’ button, on the text box, type the directory where ‘fasbook’ was cloned initially.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/\image-20200319204759447.png&quot; alt=&quot;image-20200319204759447&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/image-20200319204759447.png&quot; alt=&quot;image-20200319204759447&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This will list all the notebooks on the left, select the notebook you want to work with and proceed as usual.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/\image-20200319200242198.png&quot; alt=&quot;image-20200319200242198&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/image-20200319200242198.png&quot; alt=&quot;image-20200319200242198&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can also clone the notebook from &lt;a href=&quot;https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb&quot;&gt;here&lt;/a&gt; into your account to see this live in action.&lt;/p&gt;
 
