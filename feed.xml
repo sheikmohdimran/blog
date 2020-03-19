@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-12T03:18:36-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)</title><link href="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html" rel="alternate" type="text/html" title="COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)" /><published>2020-03-11T00:00:00-05:00</published><updated>2020-03-11T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/2020/03/11/COVID19</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html">&lt;p&gt;எழுத்தாளர்கள்: ஜெர்மி ஹோவர்ட் (&lt;em&gt;Jeremy Howard&lt;/em&gt;) மற்றும் ரேச்சல் தாமஸ் (&lt;em&gt;Rachel Thomas&lt;/em&gt;) - 09 மார்ச் 2020
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-19T07:44:15-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)</title><link href="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html" rel="alternate" type="text/html" title="COVID-19, நீங்களும் உங்கள் சமூகமும், - ஒரு தரவு அறிவியலின் முன்னோக்கு (a data science perspective)" /><published>2020-03-11T00:00:00-05:00</published><updated>2020-03-11T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/2020/03/11/COVID19</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/2020/03/11/COVID19.html">&lt;p&gt;எழுத்தாளர்கள்: ஜெர்மி ஹோவர்ட் (&lt;em&gt;Jeremy Howard&lt;/em&gt;) மற்றும் ரேச்சல் தாமஸ் (&lt;em&gt;Rachel Thomas&lt;/em&gt;) - 09 மார்ச் 2020
 மொழிபெயர்ப்பாளர்: ஷேக் முகம்மது இம்ரான் (&lt;em&gt;Sheik Mohamed Imran&lt;/em&gt;) - 11 மார்ச் 2020&lt;/p&gt;
 
 &lt;h3 id=&quot;இயங்கும்-மருத்துவ-அமைப்பு-தேவை---உடனடித்-தேவை&quot;&gt;இயங்கும் மருத்துவ அமைப்பு தேவை. - உடனடித் தேவை.&lt;/h3&gt;
@@ -15,11 +15,7 @@
 
 &lt;p&gt;இத்தாலியின் கடும் பாதிப்புக்குள்ளான பகுதியின் உள்ள Crisis response unit இன் பிராந்திய தலைவரான மரு. அன்டானியோ பெசன்ட் - Dr. Antonio Pesenti - &lt;a href=&quot;https://www.reuters.com/article/us-health-coronavirus-italy/alarmed-italy-locks-down-north-to-prevent-spread-of-coronavirus-idUSKBN20V06R&quot;&gt;கூறுகையில்&lt;/a&gt; “நாங்கள் இப்போது இந்தத் தீவிர சிகிச்சையை மருத்துவமனையிலுள்ள நடைபாதைகள், நோய் மீட்பு அறையை ஒட்டிய காலியிடங்கள்’, அறுவைச்சிச்சை (ஆபரேஷன் தியேட்டர்) ஒட்டிய காலியிடங்கள் போன்ற இடங்களில் வழங்க நிர்பந்தப்பட்டிருக்கிறோம். உலகின் மிகச் சிறந்த சுகாதார அமைப்புகளில் ஒன்று லும்பார்டி - Lombardy - யில் உள்ளது. இது தன் இயக்கநிலைச் சரிவிற்கு ஒரேயொரு படி தூரத்தில்தான் உள்ளது.”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;நோயாளிகளின் வருகையைக் கையாள உதவும் வகையில் இது போன்ற கூடாரங்கள் அமைக்கப்பட்டுள்ளன&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image1.jpg&quot; alt=&quot;&quot; title=&quot;நோயாளிகளின் வருகையைக் கையாள உதவும் வகையில் இது போன்ற கூடாரங்கள் அமைக்கப்பட்டுள்ளன&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;இது-ப்ளு---சளிக்காய்ச்சலைப்-போன்றதல்ல&quot;&gt;இது ‘ப்ளு’ - சளிக்காய்ச்சலைப் போன்றதல்ல.&lt;/h3&gt;
 
@@ -31,11 +27,7 @@
 
 &lt;p&gt;எண்ணிக்கை அளவில் பாதிக்கப்பட்டவர்கள் அதிவேகமாக அதிகரித்து வரும் வளர்ச்சியை, உள்ளுணர்வாகப் புரிந்துகொள்ள முயற்சிப்பது என்பது நமது மூளையால் கையாள வடிவமைக்கப்பட்ட ஓர் அமைப்பு அல்ல. எனவே, நம்முடைய உள்ளுணர்வைப் பயன்படுத்தாமல், இதை நாம் விஞ்ஞானிகளாக பகுப்பாய்வு செய்ய வேண்டும்.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;2 வாரங்களில் இது இங்கே இருக்கும்? சரி… 2 மாதங்களில்?&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image2.png&quot; alt=&quot;&quot; title=&quot;2 வாரங்களில் இது இங்கே இருக்கும்? சரி... 2 மாதங்களில்?&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;‘ப்ளு’ - சளிகாய்ச்சல் உள்ள ஒவ்வொரு நபரும், சராசரியாக, அவர்கள் 1.3 பேரை பாதிக்கிறார்கள். இது ‘ப்ளு’ - சளிகாய்ச்சலுக்கான “R0” என அழைக்கப்படுகிறது. R0 ‘1.0’ க்கும் குறைவாக இருந்தால், அந்தத் தொற்று பரவுவதை நிறுத்திக்கொண்டு இறந்துவிடுகிறது. அதுவே R0 1.0 க்கு மேல் இருந்தால், தொற்று பரவுகிறது. Covid-19 என்ற நச்சு நுண்ணுயிர்களுக்கான R0, தற்போது சீனாவுக்கு வெளியே 2 முதல் 3 ஆகும். இந்த வித்தியாசம் சிறியதாக தோன்றலாம், ஆனால் 20 “தலைமுறைகளாக” பாதிக்கப்பட்டு, அவ்வாறு பாதிக்கப்பட்ட R0 1.3 உள்ள நபர்கள், 146 நோய்த்தொற்றுகளை ஏற்படுத்துவர். அதுவே R0 2.5 தொற்றினால் 36 மில்லியன் நோய்த்தொற்றுகளை ஏற்படுத்தும் வாய்ப்புகள் உள்ளன! (மற்ற அனைத்தும் சமமாக இருப்பதாக கருத்தில் கொண்டால், இது ஓர் தோராயமான மற்றும் பல நிஜ உலக தாக்கங்களை புறக்கணித்த மதிப்பீடு, ஆனால் இது Covid-19 நச்சு நுண்ணுயிர் நோய்த்தொற்றிற்கும், ‘ப்ளு’ - சளிகாய்ச்சலுக்கும் இடையிலான ஒப்பீட்டு வேறுபாட்டின் நியாயமான எடுத்துக்காட்டு.)&lt;/p&gt;
 
@@ -43,10 +35,7 @@
 
 &lt;p&gt;சமூக ஊடகங்களில் பெரிதாக வரும், அதிகமாக பின்பற்றக்கூடிய -Elon Musk- போன்ற செய்யப்பட்டுள்ள கணக்குகள் உட்பட) லாஜிஸ்டிக் வளர்ச்சிக்கும் (logistics growth), அடுக்குக்குறி வளர்ச்சிக்கும் (exponential growth) இடையிலான வேறுபாட்டைத் தவறாகப் புரிந்து கொண்டு செய்தி பரப்பிவருகின்றனர்.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;அடுக்குக்குறி (exponential) vs லாஜிஸ்டிக் (logistic) வளர்ச்சி&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image3.png&quot; alt=&quot;&quot; title=&quot;அடுக்குக்குறி (exponential) vs லாஜிஸ்டிக் (logistic) வளர்ச்சி&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;“லாஜிஸ்டிக் “ வளர்ச்சி என்பது நடைமுறையில் தொற்றுநோய் பரவலின் “S-வடிவ” வளர்ச்சி முறையைக் குறிக்கிறது. அனால் அதிவேக வளர்ச்சி என்பது நிரந்தரமாக நடக்கக்கூடியது அல்ல, ஏனெனில் அப்படி நடந்தால் பாதிக்கப்பட்டோரின் எண்ணிக்கை உலகில் உள்ள மக்கள் தொகையை விட அதிகமாக இருக்கக் கூடும்!&lt;/p&gt;
 
@@ -120,11 +109,7 @@
 
 &lt;p&gt;இந்த வளைக்கோட்டினைப் படுக்கைக் கோடாகவே மாற்ற வேண்டியது - தேவையான ஒன்றானது. இது மிகவும் முக்கியமானது, ஏனென்றால் ஒரு சமூகத்தில் நோய்த்தொற்றின் வீதத்தை நாம் குறைக்க முடிந்தால், பாதிக்கப்பட்ட மற்றும் சாதாரண நோயாளிகளின் சுமையை சமாளிக்க அந்த சமூகத்தில் உள்ள மருத்துவமனைகளுக்கு வாய்ப்பை வழங்குகிறோம். இது “வளைவைச் சமன்படுத்துவது” (flattening the curve) என்று விவரிக்கப்படுகிறது, மேலும் இந்த விளக்கப்பட விளக்கப்படத்தில் தெளிவாகக் காட்டப்பட்டுள்ளது:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image4.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;இந்த சூழலில் நிலைமையை புள்ளியிடப்பட்ட கோட்டின் கீழ் வைப்பதே முக்கியமானதாகும்&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image4.jpeg&quot; alt=&quot;&quot; title=&quot;இந்த சூழலில் நிலைமையை புள்ளியிடப்பட்ட கோட்டின் கீழ் வைப்பதே முக்கியமானதாகும்&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Health IT இன் முன்னாள் தேசிய ஒருங்கிணைப்பாளரான Farzad Mostashari விளக்குகையில் : “பயண வரலாறு அல்லது அறியப்பட்ட நோயாளிகளுடன் தொடர்பு இல்லாத புதிய நோயாளிகள் ஒவ்வொரு நாளும் அடையாளம் காணப்படுகின்றனர். மேலும்மருத்துவப் பரிசோதனைகள் தாமதமடைவதால் புதிய நோயாளிகள் அடையாளம் காணப்படுவது என்பது ‘பனிப்பாறையின் நுனி’ மட்டுமே என்பதை நாங்கள் அறிவோம். அதாவது அடுத்த இரண்டு வாரங்களில் கண்டறியப்பட்ட நோயாளிகளின் எண்ணிக்கை பலவாறாக இருக்கும். அதிவேக மக்கள்/சமூகப் பரவல் இருக்கும்போது நோயைக் கட்டுப்படுத்த முயற்சிப்பது என்பது பெருந்தீயில் வீடு பற்றியெரியும்போது தீப்பொறிகளை அணைப்பதில் கவனம் செலுத்துவது போன்றது. இவ்வாறு அது நிகழும்போது, நோய் பரவும் வேகத்தை மெதுவாக்கவும், உச்ச தாக்கத்தை குறைப்பதற்கான பாதுகாப்புத் தடுப்பு நடவடிக்கைகளை சுகாதாரத்துறை மூலம் எடுப்பதற்கான உத்திகளை நாம் மேற்கொள்ளவேண்டும்.” நோய் பரவுவதை நாம் குறைவாக வைத்திருக்க முடிந்தால், நம் மருத்துவமனைகள் நோயாளர்கள் வரத்து என்ற சுமைகளை கையாளக்கூடிய அளவுக்கு மக்களுக்கு சிகிச்சையும் அளிக்கலாம். நோயாளிகள் எண்ணிக்கை மிக விரைவாகப் பெருகினால், மருத்துவமனையில் அனுமதிக்க வேண்டியவர்களுக்கு கூட அந்த வசதி வாய்ப்புகள் கிடைக்காமல் போகலாம்.&lt;/p&gt;
 
@@ -140,11 +125,7 @@
 
 &lt;p&gt;இது ஒரு கற்பனையான சூழ்நிலை மட்டுமல்ல - இது 1918 சளிகாய்ச்சல் (Flu) தொற்றுநோய்களில் தெளிவாகக் காட்டப்பட்டது. USA வில் இரண்டு நகரங்கள் தொற்றுநோய்க்கு மிகவும் மாறுபட்ட எதிர்வினைகளைக் காட்டின: பிலடெல்பியா (Philedelphia) 200,000 மக்களைக் கொண்ட ஒரு மாபெரும் அணிவகுப்புடன் நோயை எதிர்த்து நடத்தப்பட்ட சுகாதாரப்போருக்கு பணம் திரட்ட உதவியது. ஆனால் செயின்ட் லூயிஸ் (Saint Louis) சமூக தொடர்புகளைக் குறைக்க கவனமாக வடிவமைக்கப்பட்ட செயல்முறைகளை வைத்து, வைரஸின் பரவலைக் குறைப்பதோடு, அனைத்து பெரிய நிகழ்வுகளையும் ரத்துசெய்தது . தேசிய அறிவியல் அகாடமியின் செயல்முறைகளில் காட்டப்பட்டுள்ளபடி, ஒவ்வொரு நகரத்திலும் இறப்புகளின் எண்ணிக்கை எப்படி இருந்தது? &lt;a href=&quot;https://www.pnas.org/content/104/18/7582&quot;&gt;National Academy of Sciences&lt;/a&gt; யின் படி இங்கே:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image5.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;1918 காய்ச்சல் தொற்றுநோய்க்கு மாறுபட்ட நடவடிக்கைகளின் தாக்கம்&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image5.jpg&quot; alt=&quot;&quot; title=&quot;1918 காய்ச்சல் தொற்றுநோய்க்கு மாறுபட்ட நடவடிக்கைகளின் தாக்கம்&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;பிலடெல்பியாவின் (Philedelphia) நிலைமை மிகவும் மோசமானதாக மாறியது, &lt;a href=&quot;https://www.history.com/news/spanish-flu-pandemic-dead&quot;&gt;காய்ச்சலால் இறந்தவர்களைக் கையாள்வதற்கு போதுமான இறுதி சடங்குகள் அல்லது சவக்கிடங்குகள்&lt;/a&gt; இல்லாத ஒரு நிலைமை கூட ஆனது.&lt;/p&gt;
 
