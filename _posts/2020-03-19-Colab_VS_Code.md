@@ -41,7 +41,7 @@ drive.mount('/content/gdrive/')
 
 Now clone the latest version of 'fastbook' from the github repository, into the Google Drive.
 
-```console
+```
 !git clone https://github.com/fastai/course-v4 'drive/My Drive/course-v4'
 ```
 
@@ -51,7 +51,7 @@ Now clone the latest version of 'fastbook' from the github repository, into the 
 
 We will need latest release of code-server and ngrok, to enable the setup. Let us download and decompress the files.
 
-```console
+```
 !curl -sSL https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz| tar -xvz
 !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 !unzip ngrok-stable-linux-amd64.zip
@@ -105,11 +105,9 @@ This will list all the notebooks on the left, select the notebook you want to wo
 
 
 
-You can also clone the notebook from [here](https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb) into your account to see this live in action.
+> Tip: You can also clone the notebook from [here](https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb) into your account to see this live in action.
 
->**Note:** 
->
->Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..
+>Note: Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..
 ```console
 !pip install -r requirements.txt
 ```
