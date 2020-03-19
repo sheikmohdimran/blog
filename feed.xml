@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-19T11:03:07-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fast.AI Course V4 with Google Colab and VS Code</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html" rel="alternate" type="text/html" title="Fast.AI Course V4 with Google Colab and VS Code" /><published>2020-03-19T00:00:00-05:00</published><updated>2020-03-19T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-19T11:08:48-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fast.AI Course V4 with Google Colab and VS Code</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html" rel="alternate" type="text/html" title="Fast.AI Course V4 with Google Colab and VS Code" /><published>2020-03-19T00:00:00-05:00</published><updated>2020-03-19T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/fastai/course-v4
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -26,17 +26,17 @@
 
 &lt;p&gt;Now clone the latest version of ‘fastbook’ from the github repository, into the Google Drive.&lt;/p&gt;
 
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;!git clone https://github.com/fastai/course-v4 'drive/My Drive/course-v4'
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!git clone https://github.com/fastai/course-v4 'drive/My Drive/course-v4'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;download-and-unzip-the-required-packages&quot;&gt;Download and unzip the required packages&lt;/h3&gt;
 
 &lt;p&gt;We will need latest release of code-server and ngrok, to enable the setup. Let us download and decompress the files.&lt;/p&gt;
 
-&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;!curl -sSL https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz| tar -xvz
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!curl -sSL https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz| tar -xvz
 !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 !unzip ngrok-stable-linux-amd64.zip
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;generate-authtoken&quot;&gt;Generate Authtoken&lt;/h3&gt;
 
@@ -74,12 +74,12 @@
 
 &lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-19-Colab_VS_Code/image-20200319200242198.png&quot; alt=&quot;image-20200319200242198&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;You can also clone the notebook from &lt;a href=&quot;https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb&quot;&gt;here&lt;/a&gt; into your account to see this live in action.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Tip: You can also clone the notebook from &lt;a href=&quot;https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb&quot;&gt;here&lt;/a&gt; into your account to see this live in action.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..&lt;/p&gt;
+  &lt;p&gt;Note: Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..&lt;/p&gt;
   &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;!pip install -r requirements.txt
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
 &lt;/blockquote&gt;

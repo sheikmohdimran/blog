@@ -144,17 +144,17 @@ window.onload = wrap_img;
 
 <p>Now clone the latest version of ‘fastbook’ from the github repository, into the Google Drive.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">!git clone https://github.com/fastai/course-v4 'drive/My Drive/course-v4'
-</span></code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!git clone https://github.com/fastai/course-v4 'drive/My Drive/course-v4'
+</code></pre></div></div>
 
 <h3 id="download-and-unzip-the-required-packages">Download and unzip the required packages</h3>
 
 <p>We will need latest release of code-server and ngrok, to enable the setup. Let us download and decompress the files.</p>
 
-<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">!curl -sSL https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz| tar -xvz
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!curl -sSL https://github.com/cdr/code-server/releases/download/2.1698/code-server2.1698-vsc1.41.1-linux-x86_64.tar.gz| tar -xvz
 !wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 !unzip ngrok-stable-linux-amd64.zip
-</span></code></pre></div></div>
+</code></pre></div></div>
 
 <h3 id="generate-authtoken">Generate Authtoken</h3>
 
@@ -192,12 +192,12 @@ window.onload = wrap_img;
 
 <p><img src="/blog/images/2020-03-19-Colab_VS_Code/image-20200319200242198.png" alt="image-20200319200242198" /></p>
 
-<p>You can also clone the notebook from <a href="https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb">here</a> into your account to see this live in action.</p>
+<blockquote>
+  <p>Tip: You can also clone the notebook from <a href="https://github.com/sheikmohdimran/Experiments_2020/blob/master/code_server.ipynb">here</a> into your account to see this live in action.</p>
+</blockquote>
 
 <blockquote>
-  <p><strong>Note:</strong></p>
-
-  <p>Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..</p>
+  <p>Note: Prior to starting any new notebook, ensure you execute the command below, to avoid import errors..</p>
   <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">!pip install -r requirements.txt
 </span></code></pre></div>  </div>
 </blockquote>
