@@ -77,7 +77,7 @@ authtoken = getpass.getpass()
 !./ngrok authtoken $authtoken & ./ngrok http 8443 --log=stdout & ./code-server2.1698-vsc1.41.1-linux-x86_64/code-server --port '8443' --auth 'none'
 ```
 
-Output from the cell will have a link, ending with the format **http:\/\/\<random_value>.ngrok.io**
+Output from the cell will have a link, ending with the format **http://\<random_value>.ngrok.io**
 
 ![image-20200319194723416]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/image-20200319194723416.png)
 
