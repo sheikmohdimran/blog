@@ -7,7 +7,7 @@ author: Sheik Mohamed Imran
 comment: true
 ---
 
-The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
+The latest version of the popular Fast.AI course is now underway and has moved online, due to the limitation excerted by Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
 
 ```
 https://github.com/fastai/course-v4
@@ -119,6 +119,6 @@ You can also clone the notebook from [here](https://github.com/sheikmohdimran/Ex
 
 ##### References:
 
-* https://forums.fast.ai/
-* https://unix.stackexchange.com/questions/478544/connect-to-vm-through-ssh-google-colab-and-putty
-* https://imadelhanafi.com/posts/google_colal_server/
+* [https://forums.fast.ai/](https://forums.fast.ai/)
+* [https://unix.stackexchange.com/questions/478544/connect-to-vm-through-ssh-google-colab-and-putty](https://unix.stackexchange.com/questions/478544/connect-to-vm-through-ssh-google-colab-and-putty)
+* [https://imadelhanafi.com/posts/google_colal_server/](https://imadelhanafi.com/posts/google_colal_server/)
