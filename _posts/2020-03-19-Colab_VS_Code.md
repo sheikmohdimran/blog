@@ -1,4 +1,10 @@
-# Fast.AI Course V4 with Google Colab and VS Code
+---
+title: "# Fast.AI Course V4 with Google Colab and VS Code"
+toc: true
+layout: post
+categories: [colab, fastai, VSCode]
+authors: Sheik Mohamed Imran
+---
 
 The latest version of the popular Fast.AI course is now underway and due to the limitation of Corona Virus, this has moved online. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
 
