@@ -1,5 +1,5 @@
 ---
-title: "# Fast.AI Course V4 with Google Colab and VS Code"
+title: "Fast.AI Course V4 with Google Colab and VS Code"
 toc: true
 layout: post
 categories: [colab, fastai, VSCode]
@@ -79,7 +79,7 @@ authtoken = getpass.getpass()
 
 Output from the cell will have a link, ending with the format **http://<random_number>.ngrok.io**
 
-![image-20200319194723416]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/\image-20200319194723416.png)
+![image-20200319194723416]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/image-20200319194723416.png)
 
 
 
@@ -87,21 +87,21 @@ Access the URL to get a VS Code interface. Now let us enable ipython notebook su
 
 Go to 'Extensions' option in the VS Code, and search for 'Python' and click on 'Install'.
 
-![image-20200319194735469]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/\image-20200319194735469.png)
+![image-20200319194735469]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/image-20200319194735469.png)
 
 
 
 Once done, reload the VS Code UI by clicking on 'Reload Required'. This will enable the installed plugin.
 
-![image-20200319195926238]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/\image-20200319195926238.png)
+![image-20200319195926238]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/image-20200319195926238.png)
 
 To set the working directory, click on the 'Explorer' button, on the text box, type the directory where 'fasbook' was cloned initially.
 
-![image-20200319204759447]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/\image-20200319204759447.png)
+![image-20200319204759447]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/image-20200319204759447.png)
 
 This will list all the notebooks on the left, select the notebook you want to work with and proceed as usual.
 
-![image-20200319200242198]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/\image-20200319200242198.png)
+![image-20200319200242198]({{site.baseurl}}/images/2020-03-19-Colab_VS_Code/image-20200319200242198.png)
 
 
 
