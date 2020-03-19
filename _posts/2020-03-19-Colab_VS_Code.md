@@ -2,6 +2,7 @@
 title: "Fast.AI Course V4 with Google Colab and VS Code"
 toc: false
 layout: post
+comments: true
 categories: [colab, fastai, VSCode]
 authors: Sheik Mohamed Imran
 ---
