@@ -7,17 +7,9 @@ author: Sheik Mohamed Imran
 comment: true
 ---
 
-The latest version of the popular Fast.AI course is now underway and has moved [online](https://twitter.com/jeremyphoward/status/1236088745251581952), due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here. 
+We have already seen in this [post](https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html), on how to run [Fast.AI V4 notebooks](https://github.com/fastai/course-v4) through VSCode interface in Google Colab. Though Colab gives you a notebook "like" interface, but there isn't support for [ipywidgets](https://ipywidgets.readthedocs.io/en/latest/). 
 
-```
-https://github.com/fastai/course-v4
-```
-
-The course will be largely based out of the [book](https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527), which is scheduled to release on July 2020 as well.
-
-
-
-Though Google Colab gives you a notebook "like" interface, but without support for [ipywidgets](https://ipywidgets.readthedocs.io/en/latest/). JupyterLab supports this, lets see how to enable [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) in Google Colab with [ngrok](https://ngrok.com/).
+You can access in JupyterLab, but need to enable it. Lets see how to access [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) using Google Colab hardware with [ngrok](https://ngrok.com/).
 
 ### Mount Google Drive
 
@@ -55,6 +47,8 @@ authtoken = getpass.getpass()
 
 ### Upgrade node.js to latest stable version
 
+The default version of node.js installed in Colab doesn't support the installation of ipywidgets. We will upgrade its version with the below commands.
+
 ```
 !npm cache clean -f
 !npm install -g n 
@@ -65,6 +59,8 @@ authtoken = getpass.getpass()
 
 ### Install JupyterLab and ipywidgets support
 
+Now we install the jupyterlab package via pip. Once done we will install the widgets extension.
+
 ```
 !pip install -q jupyterlab
 !jupyter labextension install @jupyter-widgets/jupyterlab-manager
@@ -74,15 +70,21 @@ authtoken = getpass.getpass()
 
 ### Create tunnel
 
+Lets launch a JupyterLab instance and forward the port to ngrok.
+
 ```console
 !./ngrok authtoken $authtoken & ./ngrok http 8888 --log=stdout & jupyter lab --ip 0.0.0.0
 ```
+
+
 
 Output from the cell will have a link, ending with the format **http://\<random_value>.ngrok.io**
 
 ![image-20200325190939174]({{site.baseurl}}/images/2020-03-25-Colab_JuPyterLab/image-20200325190939174.png)
 
-Access the URL to get a JupyterLab Interface, check the 'ipywidget' support with the following code.
+
+
+Access the URL to get a JupyterLab Interface using the link above and check the 'ipywidget' support with the following code.
 
 ```python
 from ipywidgets import interact, interactive, fixed, interact_manual
@@ -99,4 +101,4 @@ interact(f, x=10);
 
 
 
-You can clone this [notebook](https://github.com/sheikmohdimran/Experiments_2020/blob/master/jupyter_lab.ipynb), and try all the steps listed above.
+> Note: You can also clone this [notebook](https://github.com/sheikmohdimran/Experiments_2020/blob/master/jupyter_lab.ipynb), and try all the steps listed above.
