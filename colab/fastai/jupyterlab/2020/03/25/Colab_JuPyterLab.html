@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Google Colab with ipywidgets enabled JupyterLab | Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Google Colab with ipywidgets enabled JupyterLab" />
+<meta name="author" content="Sheik Mohamed Imran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here." />
+<meta property="og:description" content="The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here." />
+<link rel="canonical" href="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" />
+<meta property="og:url" content="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-25T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-03-25T00:00:00-05:00","author":{"@type":"Person","name":"Sheik Mohamed Imran"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html"},"description":"The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.","@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html","headline":"Google Colab with ipywidgets enabled JupyterLab","dateModified":"2020-03-25T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Google Colab with ipywidgets enabled JupyterLab | Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Google Colab with ipywidgets enabled JupyterLab" />
+<meta name="author" content="Sheik Mohamed Imran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here." />
+<meta property="og:description" content="The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here." />
+<link rel="canonical" href="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" />
+<meta property="og:url" content="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-25T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-03-25T00:00:00-05:00","author":{"@type":"Person","name":"Sheik Mohamed Imran"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html"},"description":"The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.","@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html","headline":"Google Colab with ipywidgets enabled JupyterLab","dateModified":"2020-03-25T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    // remove paragraph tags in rendered toc (happens from notebooks)
+    var toctags = document.querySelectorAll(".toc-entry")
+    toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Google Colab with ipywidgets enabled JupyterLab</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-25T00:00:00-05:00" itemprop="datePublished">
+        Mar 25, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Sheik Mohamed Imran</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#colab">colab</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#fastai">fastai</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#JupyterLab">JupyterLab</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The latest version of the popular Fast.AI course is now underway and has moved <a href="https://twitter.com/jeremyphoward/status/1236088745251581952">online</a>, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://github.com/fastai/course-v4
+</code></pre></div></div>
+
+<p>The course will be largely based out of the <a href="https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527">book</a>, which is scheduled to release on July 2020 as well.</p>
+
+<p>Though Google Colab gives you a notebook “like” interface, but without support for <a href="https://ipywidgets.readthedocs.io/en/latest/">ipywidgets</a>. JupyterLab supports this, lets see how to enable <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> in Google Colab with <a href="https://ngrok.com/">ngrok</a>.</p>
+
+<h3 id="mount-google-drive">Mount Google Drive</h3>
+
+<p>Mount your Google drive with the command below, you’ll be asked to enter an authorization code that will be provided as output of the cell below.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s">'/content/gdrive/'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="download-and-unzip-the-ngrok-packages">Download and unzip the ngrok packages</h3>
+
+<p>Let us download and decompress the ngrok files.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+!unzip ngrok-stable-linux-amd64.zip
+</code></pre></div></div>
+
+<h3 id="generate-authtoken">Generate Authtoken</h3>
+
+<p>Create a free account in <a href="https://ngrok.com/">Ngrok</a>, and copy the generate Authentication token.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Get your authtoken from https://dashboard.ngrok.com/auth"</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">getpass</span>
+<span class="n">authtoken</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getpass</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="upgrade-nodejs-to-latest-stable-version">Upgrade node.js to latest stable version</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!npm cache clean -f
+!npm install -g n 
+!n stable
+</code></pre></div></div>
+
+<h3 id="install-jupyterlab-and-ipywidgets-support">Install JupyterLab and ipywidgets support</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>!pip install -q jupyterlab
+!jupyter labextension install @jupyter-widgets/jupyterlab-manager
+</code></pre></div></div>
+
+<h3 id="create-tunnel">Create tunnel</h3>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">!./ngrok authtoken $</span>authtoken &amp; ./ngrok http 8888 <span class="nt">--log</span><span class="o">=</span>stdout &amp; jupyter lab <span class="nt">--ip</span> 0.0.0.0
+</code></pre></div></div>
+
+<p>Output from the cell will have a link, ending with the format <strong>http://&lt;random_value&gt;.ngrok.io</strong></p>
+
+<p><img src="/blog/images/2020-03-25-Colab_JuPyterLab/image-20200325190939174.png" alt="image-20200325190939174" /></p>
+
+<p>Access the URL to get a JupyterLab Interface, check the ‘ipywidget’ support with the following code.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="n">widgets</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span>
+
+<span class="n">interact</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><img src="/blog/images/2020-03-25-Colab_JuPyterLab/image-20200325191036567.png" alt="image-20200325191036567" /></p>
+
+<p>You can clone this <a href="https://github.com/sheikmohdimran/Experiments_2020/blob/master/jupyter_lab.ipynb">notebook</a>, and try all the steps listed above.</p>
+
+  </div><a class="u-url" href="/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/sheikmohdimran" title="sheikmohdimran"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/sheikmohdimran" title="sheikmohdimran"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

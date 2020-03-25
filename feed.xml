@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-19T11:25:20-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fast.AI Course V4 with Google Colab and VS Code</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html" rel="alternate" type="text/html" title="Fast.AI Course V4 with Google Colab and VS Code" /><published>2020-03-19T00:00:00-05:00</published><updated>2020-03-19T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and has moved &lt;a href=&quot;https://twitter.com/jeremyphoward/status/1236088745251581952&quot;&gt;online&lt;/a&gt;, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-25T08:45:07-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Google Colab with ipywidgets enabled JupyterLab</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" rel="alternate" type="text/html" title="Google Colab with ipywidgets enabled JupyterLab" /><published>2020-03-25T00:00:00-05:00</published><updated>2020-03-25T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and has moved &lt;a href=&quot;https://twitter.com/jeremyphoward/status/1236088745251581952&quot;&gt;online&lt;/a&gt;, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/fastai/course-v4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The course will be largely based out of the &lt;a href=&quot;https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527&quot;&gt;book&lt;/a&gt;, which is scheduled to release on July 2020 as well.&lt;/p&gt;
+
+&lt;p&gt;Though Google Colab gives you a notebook “like” interface, but without support for &lt;a href=&quot;https://ipywidgets.readthedocs.io/en/latest/&quot;&gt;ipywidgets&lt;/a&gt;. JupyterLab supports this, lets see how to enable &lt;a href=&quot;https://jupyterlab.readthedocs.io/en/stable/&quot;&gt;JupyterLab&lt;/a&gt; in Google Colab with &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;mount-google-drive&quot;&gt;Mount Google Drive&lt;/h3&gt;
+
+&lt;p&gt;Mount your Google drive with the command below, you’ll be asked to enter an authorization code that will be provided as output of the cell below.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;google.colab&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;drive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'/content/gdrive/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;download-and-unzip-the-ngrok-packages&quot;&gt;Download and unzip the ngrok packages&lt;/h3&gt;
+
+&lt;p&gt;Let us download and decompress the ngrok files.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+!unzip ngrok-stable-linux-amd64.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;generate-authtoken&quot;&gt;Generate Authtoken&lt;/h3&gt;
+
+&lt;p&gt;Create a free account in &lt;a href=&quot;https://ngrok.com/&quot;&gt;Ngrok&lt;/a&gt;, and copy the generate Authentication token.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Get your authtoken from https://dashboard.ngrok.com/auth&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;getpass&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;authtoken&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getpass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getpass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;upgrade-nodejs-to-latest-stable-version&quot;&gt;Upgrade node.js to latest stable version&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!npm cache clean -f
+!npm install -g n 
+!n stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-jupyterlab-and-ipywidgets-support&quot;&gt;Install JupyterLab and ipywidgets support&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;!pip install -q jupyterlab
+!jupyter labextension install @jupyter-widgets/jupyterlab-manager
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;create-tunnel&quot;&gt;Create tunnel&lt;/h3&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;!./ngrok authtoken $&lt;/span&gt;authtoken &amp;amp; ./ngrok http 8888 &lt;span class=&quot;nt&quot;&gt;--log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;stdout &amp;amp; jupyter lab &lt;span class=&quot;nt&quot;&gt;--ip&lt;/span&gt; 0.0.0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Output from the cell will have a link, ending with the format &lt;strong&gt;http://&amp;lt;random_value&amp;gt;.ngrok.io&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-25-Colab_JuPyterLab/image-20200325190939174.png&quot; alt=&quot;image-20200325190939174&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Access the URL to get a JupyterLab Interface, check the ‘ipywidget’ support with the following code.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ipywidgets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;interact_manual&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ipywidgets&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;widgets&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;interact&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-25-Colab_JuPyterLab/image-20200325191036567.png&quot; alt=&quot;image-20200325191036567&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can clone this &lt;a href=&quot;https://github.com/sheikmohdimran/Experiments_2020/blob/master/jupyter_lab.ipynb&quot;&gt;notebook&lt;/a&gt;, and try all the steps listed above.&lt;/p&gt;</content><author><name>Sheik Mohamed Imran</name></author><summary type="html">The latest version of the popular Fast.AI course is now underway and has moved online, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.</summary></entry><entry><title type="html">Fast.AI Course V4 with Google Colab and VS Code</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html" rel="alternate" type="text/html" title="Fast.AI Course V4 with Google Colab and VS Code" /><published>2020-03-19T00:00:00-05:00</published><updated>2020-03-19T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html">&lt;p&gt;The latest version of the popular Fast.AI course is now underway and has moved &lt;a href=&quot;https://twitter.com/jeremyphoward/status/1236088745251581952&quot;&gt;online&lt;/a&gt;, due to the restritions in-lieu Corona Pandemic. Though the videos will be available to general public on July, you can still access the notebooks of the latest version here.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://github.com/fastai/course-v4
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
