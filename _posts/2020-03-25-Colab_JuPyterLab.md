@@ -97,7 +97,7 @@ interact(f, x=10);
 ```
 
 
-![image-20200325191036567]({{site.baseurl}}/images/2020-03-25-Colab_JuPyterLab/image-20200325191036567.png)
+![screen]({{site.baseurl}}/images/2020-03-25-Colab_JuPyterLab/screen.gif)
 
 
 
