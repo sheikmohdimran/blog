@@ -48,7 +48,7 @@ Next we need to install '[Remote - SSH](https://marketplace.visualstudio.com/ite
 
 ![SSH Architecture](https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png)
 
-Configure `ssh_config` in VSCode, so that you can login without password to the main server 
+Add necessary configurations in `ssh_config` of 'Remote - SSH', so that you can login without password to the main server 
 
 ```bash
 Host JumpHost
@@ -66,7 +66,7 @@ Host DockerContainer
   ProxyCommand ssh.exe -q -W %h:%p DockerHost
 ```
 
-Once the setup is completed, login to the docker container from VSCode.
+Once the setup is completed, login to the docker container through VSCode.
 
 If you are using Jupyter with VSCode ensure to [Disable experiments](https://github.com/microsoft/vscode-python/issues/14977#issuecomment-831304980) to make sure the python connect works with .
 
