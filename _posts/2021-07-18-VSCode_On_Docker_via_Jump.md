@@ -1,6 +1,6 @@
 Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.
 
-![]({{site.baseurl}}/images/2020-03-11-COVID19/image-20210718203123454.png "image-20210718203123454")
+![]({{site.baseurl}}/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png "image-20210718203123454")
 
 I've already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.
 
