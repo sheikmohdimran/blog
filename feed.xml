@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-07-18T12:16:50-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">VS Code on Container</title><link href="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" rel="alternate" type="text/html" title="VS Code on Container" /><published>2021-07-18T00:00:00-05:00</published><updated>2021-07-18T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html">&lt;p&gt;Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-07-18T12:18:36-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">VS Code on Container</title><link href="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" rel="alternate" type="text/html" title="VS Code on Container" /><published>2021-07-18T00:00:00-05:00</published><updated>2021-07-18T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html">&lt;p&gt;Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/blog/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png&quot; alt=&quot;&quot; title=&quot;Connecting to VSCode Server on Docker Container&quot; /&gt;&lt;/p&gt;
 
@@ -37,9 +37,9 @@ docker inspect &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&
 
 &lt;p&gt;Configure &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh_config&lt;/code&gt; in VSCode, so that you can login without password to the main server&lt;/p&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host Jump
-  HostName &amp;lt;Jump_host_IP&amp;gt;
-  User &amp;lt;Jump_host_username&amp;gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host JumpHost
+  HostName &amp;lt;JumpHost_IP&amp;gt;
+  User &amp;lt;JumpHost_username&amp;gt;
   IdentityFile &amp;lt;Location_of_id_rsa_configured_for_passwordless_login&amp;gt;
 Host DockerHost
   HostName &amp;lt;DockerHost_IP&amp;gt;
@@ -48,7 +48,7 @@ Host DockerHost
   IdentityFile &amp;lt;Location_of_id_rsa_configured_for_passwordless_login&amp;gt;
 Host DockerContainer
   HostName &amp;lt;DockerContainer_IP&amp;gt;
-  User &amp;lt;DockerHost_Username&amp;gt;
+  User &amp;lt;DockerContainer_Username&amp;gt;
   ProxyCommand ssh.exe &lt;span class=&quot;nt&quot;&gt;-q&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-W&lt;/span&gt; %h:%p DockerHost
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 

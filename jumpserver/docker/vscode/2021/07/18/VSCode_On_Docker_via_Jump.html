@@ -155,9 +155,9 @@ docker inspect <span class="nt">-f</span> <span class="s2">"{{ .NetworkSettings.
 
 <p>Configure <code class="highlighter-rouge">ssh_config</code> in VSCode, so that you can login without password to the main server</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host Jump
-  HostName &lt;Jump_host_IP&gt;
-  User &lt;Jump_host_username&gt;
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host JumpHost
+  HostName &lt;JumpHost_IP&gt;
+  User &lt;JumpHost_username&gt;
   IdentityFile &lt;Location_of_id_rsa_configured_for_passwordless_login&gt;
 Host DockerHost
   HostName &lt;DockerHost_IP&gt;
@@ -166,7 +166,7 @@ Host DockerHost
   IdentityFile &lt;Location_of_id_rsa_configured_for_passwordless_login&gt;
 Host DockerContainer
   HostName &lt;DockerContainer_IP&gt;
-  User &lt;DockerHost_Username&gt;
+  User &lt;DockerContainer_Username&gt;
   ProxyCommand ssh.exe <span class="nt">-q</span> <span class="nt">-W</span> %h:%p DockerHost
 </code></pre></div></div>
 
