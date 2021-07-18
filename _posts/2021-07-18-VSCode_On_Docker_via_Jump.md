@@ -34,7 +34,7 @@ Once done get the IP address of the container with the following command
 {% raw %}
 ```bash
 #From Host
-docker inspect -f "{{ .NetworkSettings.IPAddress }}" bold_cori
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" <DockerContainer_Name>
 ```
 {% endraw %}
 
