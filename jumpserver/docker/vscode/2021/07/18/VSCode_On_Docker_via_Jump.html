@@ -140,13 +140,13 @@ passwd
 
 <p>Once done get the IP address of the container with the following command</p>
 
-<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#From Host</span>
-docker inspect -f "" bold_cori
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#From Host
+docker inspect -f "\{\{ .NetworkSettings.IPAddress \}\}" bold_cori
 </code></pre></div></div>
 
 <p>Check if the login works with the IP identified in the earlier step.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh root@&lt;container_IP<span class="o">}&gt;</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh root@&lt;container_IP&gt;
 </code></pre></div></div>
 
 <p>Next we need to install ‘<a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH</a>’ in VSCode. This help with connecting you local VSCode to VS Code Server on the remote system.</p>
