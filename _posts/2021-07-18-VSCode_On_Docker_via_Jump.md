@@ -31,10 +31,12 @@ echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 Once done get the IP address of the container with the following command
 
+{% raw %}
 ```bash
 #From Host
-docker inspect -f "{/{ .NetworkSettings.IPAddress }/}" bold_cori
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" bold_cori
 ```
+{% endraw %}
 
 Check if the login works with the IP identified in the earlier step.
 
