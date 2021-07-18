@@ -118,7 +118,7 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <p>Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.</p>
 
-<p><img src="/blog/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png" alt="" title="image-20210718203123454" /></p>
+<p><img src="/blog/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png" alt="" title="Connecting to VSCode Server on Docker Container" /></p>
 
 <p>I had already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.</p>
 
@@ -140,8 +140,8 @@ passwd
 
 <p>Once done get the IP address of the container with the following command</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#From Host</span>
-docker inspect <span class="nt">-f</span> <span class="s2">""</span> bold_cori
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#From Host</span>
+docker inspect -f "" bold_cori
 </code></pre></div></div>
 
 <p>Check if the login works with the IP identified in the earlier step.</p>
