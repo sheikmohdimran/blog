@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2020-03-25T10:56:27-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Google Colab with ipywidgets enabled JupyterLab</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" rel="alternate" type="text/html" title="Google Colab with ipywidgets enabled JupyterLab" /><published>2020-03-25T00:00:00-05:00</published><updated>2020-03-25T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html">&lt;p&gt;We have already seen in this &lt;a href=&quot;https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html&quot;&gt;post&lt;/a&gt;, on how to run &lt;a href=&quot;https://github.com/fastai/course-v4&quot;&gt;Fast.AI V4 notebooks&lt;/a&gt; through VSCode interface in Google Colab. Though Colab gives you a notebook “like” interface, but there isn’t support for &lt;a href=&quot;https://ipywidgets.readthedocs.io/en/latest/&quot;&gt;ipywidgets&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://sheikmohdimran.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sheikmohdimran.github.io/blog/" rel="alternate" type="text/html" /><updated>2021-07-18T11:21:47-05:00</updated><id>https://sheikmohdimran.github.io/blog/feed.xml</id><title type="html">Blog</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Vscode_on_docker_via_jump</title><link href="https://sheikmohdimran.github.io/blog/2021/07/18/VSCode_On_Docker_via_Jump.html" rel="alternate" type="text/html" title="Vscode_on_docker_via_jump" /><published>2021-07-18T00:00:00-05:00</published><updated>2021-07-18T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/2021/07/18/VSCode_On_Docker_via_Jump</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/2021/07/18/VSCode_On_Docker_via_Jump.html">&lt;p&gt;Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/blog/images/2020-03-11-COVID19/image-20210718203123454.png&quot; alt=&quot;&quot; title=&quot;image-20210718203123454&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.&lt;/p&gt;
+
+&lt;p&gt;So first, start the container on the docker host and setup SSH Server in the container.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#On Container:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#install ssh server&lt;/span&gt;
+apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt &lt;span class=&quot;nb&quot;&gt;install  &lt;/span&gt;openssh-server 
+
+&lt;span class=&quot;c&quot;&gt;#change root password&lt;/span&gt;
+passwd 
+
+&lt;span class=&quot;c&quot;&gt;#Enable to login as root via ssh&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;PermitRootLogin yes&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; /etc/ssh/sshd_config
+
+&lt;span class=&quot;c&quot;&gt;#Start SSH Server&lt;/span&gt;
+/etc/init.d/ssh start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once done get the IP address of the container with the following command&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#From Host&lt;/span&gt;
+docker inspect &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt; bold_cori
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Check if the login works with the IP identified in the earlier step.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh root@&amp;lt;container_IP&lt;span class=&quot;o&quot;&gt;}&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next we need to install ‘&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh&quot;&gt;Remote - SSH&lt;/a&gt;’ in VSCode. This help with connecting you local VSCode to VS Code Server on the remote system.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png&quot; alt=&quot;SSH Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Configure &lt;code class=&quot;highlighter-rouge&quot;&gt;ssh_config&lt;/code&gt; in VSCode, so that you can login without password to the main server&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host Jump
+  HostName &amp;lt;Jump_host_IP&amp;gt;
+  User &amp;lt;Jump_host_username&amp;gt;
+  IdentityFile &amp;lt;Location_of_id_rsa_configured_for_passwordless_login&amp;gt;
+Host DockerHost
+  HostName &amp;lt;DockerHost_IP&amp;gt;
+  User &amp;lt;DockerHost_Username&amp;gt;
+  ProxyCommand ssh.exe &lt;span class=&quot;nt&quot;&gt;-q&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-W&lt;/span&gt; %h:%p Jump
+  IdentityFile &amp;lt;Location_of_id_rsa_configured_for_passwordless_login&amp;gt;
+Host DockerContainer
+  HostName &amp;lt;DockerContainer_IP&amp;gt;
+  User &amp;lt;DockerHost_Username&amp;gt;
+  ProxyCommand ssh.exe &lt;span class=&quot;nt&quot;&gt;-q&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-W&lt;/span&gt; %h:%p DockerHost
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the setup is completed, login to the docker container from VSCode.&lt;/p&gt;
+
+&lt;p&gt;If you are using Jupyter with VSCode ensure to &lt;a href=&quot;https://github.com/microsoft/vscode-python/issues/14977#issuecomment-831304980&quot;&gt;Disable experiments&lt;/a&gt; to make sure the python connect works with .&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#Edit in settings.json&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;notebook.experimental.useMarkdownRenderer&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;terminal.integrated.experimentalLinkProvider&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;python.languageServer&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;Pylance&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;terminal.integrated.shell.linux&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;/bin/bash&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;python.defaultInterpreterPath&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;/usr/bin/python3&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;python.experiments.enabled&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note: If re-connecting to a same IP address with a new container:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Edit path of &lt;span class=&quot;s2&quot;&gt;&quot;known_hosts&quot;&lt;/span&gt; given &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;output window to remove entry &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;the IP address.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.</summary></entry><entry><title type="html">Google Colab with ipywidgets enabled JupyterLab</title><link href="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html" rel="alternate" type="text/html" title="Google Colab with ipywidgets enabled JupyterLab" /><published>2020-03-25T00:00:00-05:00</published><updated>2020-03-25T00:00:00-05:00</updated><id>https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab</id><content type="html" xml:base="https://sheikmohdimran.github.io/blog/colab/fastai/jupyterlab/2020/03/25/Colab_JuPyterLab.html">&lt;p&gt;We have already seen in this &lt;a href=&quot;https://sheikmohdimran.github.io/blog/colab/fastai/vscode/2020/03/19/Colab_VS_Code.html&quot;&gt;post&lt;/a&gt;, on how to run &lt;a href=&quot;https://github.com/fastai/course-v4&quot;&gt;Fast.AI V4 notebooks&lt;/a&gt; through VSCode interface in Google Colab. Though Colab gives you a notebook “like” interface, but there isn’t support for &lt;a href=&quot;https://ipywidgets.readthedocs.io/en/latest/&quot;&gt;ipywidgets&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You can access in JupyterLab, but need to enable it. Lets see how to access &lt;a href=&quot;https://jupyterlab.readthedocs.io/en/stable/&quot;&gt;JupyterLab&lt;/a&gt; using Google Colab hardware with &lt;a href=&quot;https://ngrok.com/&quot;&gt;ngrok&lt;/a&gt;.&lt;/p&gt;
 
@@ -1084,7 +1157,7 @@
 
 &lt;h2 id=&quot;basic-formatting&quot;&gt;Basic formatting&lt;/h2&gt;
 
-&lt;p&gt;You can use &lt;em&gt;italics&lt;/em&gt;, &lt;strong&gt;bold&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;code font text&lt;/code&gt;, and create &lt;a href=&quot;https://www.markdownguide.org/cheat-sheet/&quot;&gt;links&lt;/a&gt;. Here’s a footnote &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Here’s a horizontal rule:&lt;/p&gt;
+&lt;p&gt;You can use &lt;em&gt;italics&lt;/em&gt;, &lt;strong&gt;bold&lt;/strong&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;code font text&lt;/code&gt;, and create &lt;a href=&quot;https://www.markdownguide.org/cheat-sheet/&quot;&gt;links&lt;/a&gt;. Here’s a footnote &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;. Here’s a horizontal rule:&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1183,10 +1256,10 @@ wget https://example.com/cat_photo1.png
 
 &lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;This is the footnote. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;This is the footnote. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name></name></author><summary type="html">Example Markdown Post</summary></entry></feed>
