@@ -120,7 +120,7 @@ window.onload = wrap_img;
 
 <p><img src="/blog/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png" alt="" title="Connecting to VSCode Server on Docker Container" /></p>
 
-<p>I had already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.</p>
+<p>I had already setup passwordless login to the <code class="highlighter-rouge">Jump server</code> and <code class="highlighter-rouge">DockerHost</code>, there are already many articles on how to get this done, so I am going to skip that part.</p>
 
 <p>So first, start the container on the docker host and setup SSH Server in the container.</p>
 
@@ -140,8 +140,8 @@ passwd
 
 <p>Once done get the IP address of the container with the following command</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#From Host
-docker inspect -f "\{\{ .NetworkSettings.IPAddress \}\}" bold_cori
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#From Host</span>
+docker inspect <span class="nt">-f</span> <span class="s2">"</span><span class="se">\{\{</span><span class="s2"> .NetworkSettings.IPAddress </span><span class="se">\}\}</span><span class="s2">"</span> bold_cori
 </code></pre></div></div>
 
 <p>Check if the login works with the IP identified in the earlier step.</p>
