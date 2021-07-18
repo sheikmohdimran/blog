@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Vscode_on_docker_via_jump",
+            "title": "VS Code on Container",
             "content": "Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem. . . I’ve already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part. . So first, start the container on the docker host and setup SSH Server in the container. . #On Container: #install ssh server apt update &amp;&amp; apt install openssh-server #change root password passwd #Enable to login as root via ssh echo &quot;PermitRootLogin yes&quot; &gt;&gt; /etc/ssh/sshd_config #Start SSH Server /etc/init.d/ssh start . Once done get the IP address of the container with the following command . #From Host docker inspect -f &quot;&quot; bold_cori . Check if the login works with the IP identified in the earlier step. . ssh root@&lt;container_IP}&gt; . Next we need to install ‘Remote - SSH’ in VSCode. This help with connecting you local VSCode to VS Code Server on the remote system. . . Configure ssh_config in VSCode, so that you can login without password to the main server . Host Jump HostName &lt;Jump_host_IP&gt; User &lt;Jump_host_username&gt; IdentityFile &lt;Location_of_id_rsa_configured_for_passwordless_login&gt; Host DockerHost HostName &lt;DockerHost_IP&gt; User &lt;DockerHost_Username&gt; ProxyCommand ssh.exe -q -W %h:%p Jump IdentityFile &lt;Location_of_id_rsa_configured_for_passwordless_login&gt; Host DockerContainer HostName &lt;DockerContainer_IP&gt; User &lt;DockerHost_Username&gt; ProxyCommand ssh.exe -q -W %h:%p DockerHost . Once the setup is completed, login to the docker container from VSCode. . If you are using Jupyter with VSCode ensure to Disable experiments to make sure the python connect works with . . #Edit in settings.json { &quot;notebook.experimental.useMarkdownRenderer&quot;: false, &quot;terminal.integrated.experimentalLinkProvider&quot;: false, &quot;python.languageServer&quot;: &quot;Pylance&quot;, &quot;terminal.integrated.shell.linux&quot;: &quot;/bin/bash&quot;, &quot;python.defaultInterpreterPath&quot;: &quot;/usr/bin/python3&quot;, &quot;python.experiments.enabled&quot;: false } . Note: If re-connecting to a same IP address with a new container: . Edit path of &quot;known_hosts&quot; given in output window to remove entry for the IP address. .",
-            "url": "https://sheikmohdimran.github.io/blog/2021/07/18/VSCode_On_Docker_via_Jump.html",
-            "relUrl": "/2021/07/18/VSCode_On_Docker_via_Jump.html",
+            "url": "https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html",
+            "relUrl": "/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html",
             "date": " • Jul 18, 2021"
         }
         
@@ -51,17 +51,6 @@
             "url": "https://sheikmohdimran.github.io/blog/jupyter/2020/02/20/test.html",
             "relUrl": "/jupyter/2020/02/20/test.html",
             "date": " • Feb 20, 2020"
-        }
-        
-    
-  
-    
-        ,"post5": {
-            "title": "Test Markdown Post",
-            "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
-            "url": "https://sheikmohdimran.github.io/blog/markdown/2020/01/14/test-markdown-post.html",
-            "relUrl": "/markdown/2020/01/14/test-markdown-post.html",
-            "date": " • Jan 14, 2020"
         }
         
     

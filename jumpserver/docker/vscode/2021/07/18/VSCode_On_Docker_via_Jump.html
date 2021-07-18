@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VS Code on Container | Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="VS Code on Container" />
+<meta name="author" content="Sheik Mohamed Imran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<meta property="og:description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<link rel="canonical" href="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
+<meta property="og:url" content="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Sheik Mohamed Imran"},"description":"Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html"},"@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html","headline":"VS Code on Container","dateModified":"2021-07-18T00:00:00-05:00","datePublished":"2021-07-18T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>VS Code on Container | Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="VS Code on Container" />
+<meta name="author" content="Sheik Mohamed Imran" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<meta property="og:description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<link rel="canonical" href="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
+<meta property="og:url" content="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
+<meta property="og:site_name" content="Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Sheik Mohamed Imran"},"description":"Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html"},"@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html","headline":"VS Code on Container","dateModified":"2021-07-18T00:00:00-05:00","datePublished":"2021-07-18T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    // remove paragraph tags in rendered toc (happens from notebooks)
+    var toctags = document.querySelectorAll(".toc-entry")
+    toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">VS Code on Container</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-18T00:00:00-05:00" itemprop="datePublished">
+        Jul 18, 2021
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Sheik Mohamed Imran</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#JumpServer">JumpServer</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#Docker">Docker</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#VSCode">VSCode</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.</p>
+
+<p><img src="/blog/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png" alt="" title="image-20210718203123454" /></p>
+
+<p>I’ve already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.</p>
+
+<p>So first, start the container on the docker host and setup SSH Server in the container.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#On Container:</span>
+<span class="c">#install ssh server</span>
+apt update <span class="o">&amp;&amp;</span> apt <span class="nb">install  </span>openssh-server 
+
+<span class="c">#change root password</span>
+passwd 
+
+<span class="c">#Enable to login as root via ssh</span>
+<span class="nb">echo</span> <span class="s2">"PermitRootLogin yes"</span> <span class="o">&gt;&gt;</span> /etc/ssh/sshd_config
+
+<span class="c">#Start SSH Server</span>
+/etc/init.d/ssh start
+</code></pre></div></div>
+
+<p>Once done get the IP address of the container with the following command</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#From Host</span>
+docker inspect <span class="nt">-f</span> <span class="s2">""</span> bold_cori
+</code></pre></div></div>
+
+<p>Check if the login works with the IP identified in the earlier step.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh root@&lt;container_IP<span class="o">}&gt;</span>
+</code></pre></div></div>
+
+<p>Next we need to install ‘<a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote - SSH</a>’ in VSCode. This help with connecting you local VSCode to VS Code Server on the remote system.</p>
+
+<p><img src="https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png" alt="SSH Architecture" /></p>
+
+<p>Configure <code class="highlighter-rouge">ssh_config</code> in VSCode, so that you can login without password to the main server</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host Jump
+  HostName &lt;Jump_host_IP&gt;
+  User &lt;Jump_host_username&gt;
+  IdentityFile &lt;Location_of_id_rsa_configured_for_passwordless_login&gt;
+Host DockerHost
+  HostName &lt;DockerHost_IP&gt;
+  User &lt;DockerHost_Username&gt;
+  ProxyCommand ssh.exe <span class="nt">-q</span> <span class="nt">-W</span> %h:%p Jump
+  IdentityFile &lt;Location_of_id_rsa_configured_for_passwordless_login&gt;
+Host DockerContainer
+  HostName &lt;DockerContainer_IP&gt;
+  User &lt;DockerHost_Username&gt;
+  ProxyCommand ssh.exe <span class="nt">-q</span> <span class="nt">-W</span> %h:%p DockerHost
+</code></pre></div></div>
+
+<p>Once the setup is completed, login to the docker container from VSCode.</p>
+
+<p>If you are using Jupyter with VSCode ensure to <a href="https://github.com/microsoft/vscode-python/issues/14977#issuecomment-831304980">Disable experiments</a> to make sure the python connect works with .</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#Edit in settings.json</span>
+
+<span class="o">{</span>
+    <span class="s2">"notebook.experimental.useMarkdownRenderer"</span>: <span class="nb">false</span>,
+    <span class="s2">"terminal.integrated.experimentalLinkProvider"</span>: <span class="nb">false</span>,
+    <span class="s2">"python.languageServer"</span>: <span class="s2">"Pylance"</span>,
+    <span class="s2">"terminal.integrated.shell.linux"</span>: <span class="s2">"/bin/bash"</span>,
+    <span class="s2">"python.defaultInterpreterPath"</span>: <span class="s2">"/usr/bin/python3"</span>,
+    <span class="s2">"python.experiments.enabled"</span>: <span class="nb">false</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Note: If re-connecting to a same IP address with a new container:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Edit path of <span class="s2">"known_hosts"</span> given <span class="k">in </span>output window to remove entry <span class="k">for </span>the IP address.
+</code></pre></div></div>
+
+
+  </div><a class="u-url" href="/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/sheikmohdimran" title="sheikmohdimran"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/sheikmohdimran" title="sheikmohdimran"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
