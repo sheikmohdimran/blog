@@ -6,33 +6,31 @@
 <title>VS Code on Container | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="VS Code on Container" />
-<meta name="author" content="Sheik Mohamed Imran" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
-<meta property="og:description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<meta name="description" content="Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<meta property="og:description" content="Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
 <link rel="canonical" href="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
 <meta property="og:url" content="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
 <meta property="og:site_name" content="Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-18T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Sheik Mohamed Imran"},"description":"Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html"},"@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html","headline":"VS Code on Container","dateModified":"2021-07-18T00:00:00-05:00","datePublished":"2021-07-18T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"description":"Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html"},"@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html","headline":"VS Code on Container","dateModified":"2021-07-18T00:00:00-05:00","datePublished":"2021-07-18T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sheikmohdimran.github.io/blog/feed.xml" title="Blog" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>VS Code on Container | Blog</title>
 <meta name="generator" content="Jekyll v4.0.0" />
 <meta property="og:title" content="VS Code on Container" />
-<meta name="author" content="Sheik Mohamed Imran" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
-<meta property="og:description" content="Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<meta name="description" content="Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
+<meta property="og:description" content="Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem." />
 <link rel="canonical" href="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
 <meta property="og:url" content="https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html" />
 <meta property="og:site_name" content="Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-18T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Sheik Mohamed Imran"},"description":"Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html"},"@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html","headline":"VS Code on Container","dateModified":"2021-07-18T00:00:00-05:00","datePublished":"2021-07-18T00:00:00-05:00","@context":"https://schema.org"}</script>
+{"description":"Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.","mainEntityOfPage":{"@type":"WebPage","@id":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html"},"@type":"BlogPosting","url":"https://sheikmohdimran.github.io/blog/jumpserver/docker/vscode/2021/07/18/VSCode_On_Docker_via_Jump.html","headline":"VS Code on Container","dateModified":"2021-07-18T00:00:00-05:00","datePublished":"2021-07-18T00:00:00-05:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -92,9 +90,7 @@ window.onload = wrap_img;
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">VS Code on Container</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-18T00:00:00-05:00" itemprop="datePublished">
         Jul 18, 2021
-      </time>• 
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">Sheik Mohamed Imran</span></span>
+      </time>
        • <span class="read-time" title="Estimated read time">
     
     
@@ -120,11 +116,11 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>Long history short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.</p>
+    <p>Long story short, in my workplace I had to use VSCode on a Container, running inside a docker host, which is accessible only via a Jump Server (security measures). Looked up at many tutorials on the net to get this done, but more or less all of them involved installing docker on my window laptop. Tinkered around a few steps and made it work. Below given is the step by step instruction on how to do this, if you had a similar problem.</p>
 
 <p><img src="/blog/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png" alt="" title="image-20210718203123454" /></p>
 
-<p>I’ve already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.</p>
+<p>I had already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.</p>
 
 <p>So first, start the container on the docker host and setup SSH Server in the container.</p>
 
