@@ -44,7 +44,7 @@ Check if the login works with the IP identified in the earlier step.
 ssh <container_username>@<container_IP>
 ```
 
-Next we need to install '[Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)' in VSCode. This help with connecting you local VSCode to VS Code Server on the remote system. 
+Next we need to install '[Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)' in our local system. This helps connecting your local VSCode with VSCode Server on the remote server. 
 
 ![SSH Architecture](https://code.visualstudio.com/assets/docs/remote/ssh/architecture-ssh.png)
 
