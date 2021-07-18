@@ -51,9 +51,9 @@ Next we need to install '[Remote - SSH](https://marketplace.visualstudio.com/ite
 Configure `ssh_config` in VSCode, so that you can login without password to the main server 
 
 ```bash
-Host Jump
-  HostName <Jump_host_IP>
-  User <Jump_host_username>
+Host JumpHost
+  HostName <JumpHost_IP>
+  User <JumpHost_username>
   IdentityFile <Location_of_id_rsa_configured_for_passwordless_login>
 Host DockerHost
   HostName <DockerHost_IP>
@@ -62,7 +62,7 @@ Host DockerHost
   IdentityFile <Location_of_id_rsa_configured_for_passwordless_login>
 Host DockerContainer
   HostName <DockerContainer_IP>
-  User <DockerHost_Username>
+  User <DockerContainer_Username>
   ProxyCommand ssh.exe -q -W %h:%p DockerHost
 ```
 
