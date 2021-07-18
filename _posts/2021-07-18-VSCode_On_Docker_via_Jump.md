@@ -10,7 +10,7 @@ Long story short, in my workplace I had to use VSCode on a Container, running in
 
 ![]({{site.baseurl}}/images/2021-07-18-VSCode_On_Docker_via_Jump/image-20210718203123454.png "Connecting to VSCode Server on Docker Container")
 
-I had already setup passwordless login to the Jump server and docker host, there are many articles on doing this, so I am going to skip that part.
+I had already setup passwordless login to the `Jump server` and `DockerHost`, there are already many articles on how to get this done, so I am going to skip that part.
 
 So first, start the container on the docker host and setup SSH Server in the container.
 
@@ -31,7 +31,7 @@ echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 Once done get the IP address of the container with the following command
 
-```
+```bash
 #From Host
 docker inspect -f "\{\{ .NetworkSettings.IPAddress \}\}" bold_cori
 ```
